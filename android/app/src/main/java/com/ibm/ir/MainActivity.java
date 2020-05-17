@@ -8,30 +8,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.Date;
 import java.util.Set;
 import java.util.UUID;
+
+import rx.Subscription;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView myLabel;
-    EditText myTextbox;
     BluetoothAdapter mBluetoothAdapter;
     BluetoothSocket mmSocket;
     BluetoothDevice mmDevice;
-    OutputStream mmOutputStream;
     InputStream mmInputStream;
-    DataSaver dataSaver;
+    Subscription subscription = null;
     boolean isReckordindData = false;
+    DataSubscriber dataSubscriber = new DataSubscriber();
+    BluetoothDataReceiver bluetoothDataReceiver = new BluetoothDataReceiver();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         Button sendButton = (Button) findViewById(R.id.send1);
         Button closeButton = (Button) findViewById(R.id.close1);
         myLabel = (TextView) findViewById(R.id.label1);
-        dataSaver = new DataSaver();
 
         openButton.setOnClickListener(v -> {
             try {
@@ -53,13 +49,16 @@ public class MainActivity extends AppCompatActivity {
         });
         //Send Button
         sendButton.setOnClickListener(v -> {
-
             if (!isReckordindData) {
-                dataSaver.beginListenForData(mmInputStream);
+                subscription = bluetoothDataReceiver.dataStream(mmInputStream, dataSubscriber);
                 isReckordindData = true;
             } else {
-                final TrainingDataStructure trainingDataStructure = dataSaver.collectData();
-                new Handler().post(() -> myLabel.setText(trainingDataStructure.emgData.toString()));
+                new Handler().post(() -> {
+                    myLabel.setText(dataSubscriber.returnData().toString());
+                    dataSubscriber.resetModel();
+                });
+                dataSubscriber.setEndDate();
+                subscription.unsubscribe();
                 isReckordindData = false;
             }
         });
@@ -100,23 +99,13 @@ public class MainActivity extends AppCompatActivity {
         UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); //Standard SerialPortService ID
         mmSocket = mmDevice.createRfcommSocketToServiceRecord(uuid);
         mmSocket.connect();
-        mmOutputStream = mmSocket.getOutputStream();
         mmInputStream = mmSocket.getInputStream();
 
         myLabel.setText("Bluetooth Opened");
     }
 
 
-    void sendData() throws IOException {
-        String msg = myTextbox.getText().toString();
-        msg += "\n";
-        mmOutputStream.write(msg.getBytes());
-        myLabel.setText("Data Sent");
-    }
-
     void closeBT() throws IOException {
-        //stopWorker = true;
-        mmOutputStream.close();
         mmInputStream.close();
         mmSocket.close();
         myLabel.setText("Bluetooth Closed");

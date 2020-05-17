@@ -1,0 +1,8 @@
+version: '2'
+services:
+  mongo:
+    image: "mongo:3.6"
+    container_name: myMongo
+    ports:
+     - "27017:27017"
+    mem_limit: 2G
