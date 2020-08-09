@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
             } catch (IOException ex) {
             }
         });
+
+
     }
 
     void findBT() {
@@ -110,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         mmSocket.close();
         myLabel.setText("Bluetooth Closed");
     }
+
 }
 
 
