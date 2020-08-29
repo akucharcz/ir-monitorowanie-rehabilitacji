@@ -15,6 +15,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -158,13 +159,12 @@ public class LoginActivity extends Activity implements OnClickListener {
 
         protected void onPostExecute(String result) {
             Log.e("TAG", result);
-            //tu potrzeba dorobić sprawdzenie czy na liście użytkowników jest login i hasło jakie mamy
-//            if (result.contains(username) && result.contains(password)) {
-//                doSomethingElse();
-//            }
-//            else {
-//
-//            }
+            if (result.contains("accepted")) {
+                doSomethingElse();
+            }
+            else {
+                Toast.makeText(LoginActivity.this, "Błędny login lub hasło", Toast.LENGTH_LONG).show();
+            }
         }
     }
 }
