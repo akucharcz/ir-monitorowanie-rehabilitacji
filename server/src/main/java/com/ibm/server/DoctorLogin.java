@@ -17,12 +17,17 @@ public class DoctorLogin {
     private LoginRepository loginRepository;
     private UserService userService;
     @PostMapping("/login")
-    //public List<LoginStructure> doctorLogin(@ModelAttribute LoginStructure login, Model model) {
     public String doctorLogin(@ModelAttribute LoginStructure login, Model model) {
         model.addAttribute("login", login);
-        // powinna w androidzie pojawic sie lista uzytkownikow
-//        return userService.findAll();
-        return "test";
+        try {
+            List<LoginStructure> usersList = userService.findAll();
+            if (usersList.contains(login)) {
+                return "Login accepted";
+            }
+            return "Login rejected";
+        } catch (Exception ex) {
+            return "Error getting data";
+        }
     }
 
     @GetMapping("/login")
