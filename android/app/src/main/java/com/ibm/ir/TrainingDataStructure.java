@@ -17,4 +17,5 @@ class TrainingDataStructure {
    private List<Integer> emgData = new ArrayList<>();
    private Date start;
    private Date end;
+   private String login;
 }

@@ -32,7 +32,7 @@ import java.util.ArrayList;
 public class LoginActivity extends Activity implements OnClickListener {
 
     private String username, password;
-    private Button ok;
+    private Button ok, register;
     private EditText editTextUsername, editTextPassword;
     private CheckBox saveLoginCheckBox;
     private SharedPreferences loginPreferences;
@@ -46,6 +46,14 @@ public class LoginActivity extends Activity implements OnClickListener {
 
         ok = (Button) findViewById(R.id.login);
         ok.setOnClickListener(this);
+        register = (Button) findViewById(R.id.register);
+        register.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                LoginActivity.this.finish();
+            }
+        });
         editTextUsername = (EditText) findViewById(R.id.name_login);
         editTextPassword = (EditText) findViewById(R.id.surname_login);
         saveLoginCheckBox = (CheckBox) findViewById(R.id.saveLoginCheckBox);
