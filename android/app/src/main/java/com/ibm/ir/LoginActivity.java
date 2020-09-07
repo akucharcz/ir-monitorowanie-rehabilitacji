@@ -32,7 +32,7 @@ import java.util.ArrayList;
 public class LoginActivity extends Activity implements OnClickListener {
 
     private String username, password;
-    private Button ok, register;
+    private Button ok;
     private EditText editTextUsername, editTextPassword;
     private CheckBox saveLoginCheckBox;
     private SharedPreferences loginPreferences;
@@ -46,14 +46,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 
         ok = (Button) findViewById(R.id.login);
         ok.setOnClickListener(this);
-        register = (Button) findViewById(R.id.register);
-        register.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-                LoginActivity.this.finish();
-            }
-        });
+
         editTextUsername = (EditText) findViewById(R.id.name_login);
         editTextPassword = (EditText) findViewById(R.id.surname_login);
         saveLoginCheckBox = (CheckBox) findViewById(R.id.saveLoginCheckBox);
@@ -99,7 +92,8 @@ public class LoginActivity extends Activity implements OnClickListener {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String server_url = "http://192.168.0.66:8081/login";
+        String server_url = "http://192.168.1.24:8081/login";
+        Log.e("Tag", logindata.toString());
         new RaportOperation().execute(server_url, logindata.toString());
     }
 
