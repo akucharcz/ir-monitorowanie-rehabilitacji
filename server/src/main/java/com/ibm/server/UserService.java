@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserService {
-    private LoginRepository loginRepository;
+    private final LoginRepository loginRepository;
+
+    public UserService(LoginRepository loginRepository) {
+        this.loginRepository = loginRepository;
+    }
+
     public List<LoginStructure> findAll() {
 
         var it = loginRepository.findAll();
