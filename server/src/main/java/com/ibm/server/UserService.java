@@ -15,7 +15,7 @@ public class UserService {
         var it = loginRepository.findAll();
 
         var users = new ArrayList<LoginStructure>();
-        it.forEach(e -> users.add(e));
+        it.forEach(users::add);
 
         return users;
     }

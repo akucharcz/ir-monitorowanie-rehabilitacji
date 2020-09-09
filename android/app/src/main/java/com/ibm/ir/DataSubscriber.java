@@ -1,5 +1,7 @@
 package com.ibm.ir;
 
+import com.ibm.ir.model.TrainingDataStructure;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

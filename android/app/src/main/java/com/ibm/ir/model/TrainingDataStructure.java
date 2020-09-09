@@ -1,4 +1,4 @@
-package com.ibm.ir;
+package com.ibm.ir.model;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,7 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-class TrainingDataStructure {
+public class TrainingDataStructure {
    private List<Integer> emgData = new ArrayList<>();
    private Date start;
    private Date end;

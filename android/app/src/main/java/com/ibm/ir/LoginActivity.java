@@ -11,15 +11,12 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.ibm.ir.model.LoginStructure;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -27,7 +24,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends Activity implements OnClickListener {
 
@@ -78,95 +78,29 @@ public class LoginActivity extends Activity implements OnClickListener {
                 loginPrefsEditor.clear();
                 loginPrefsEditor.commit();
             }
+        }
+        LoginStructure loginStructure = new LoginStructure(username,password);
+        ApiUtils.getAPIService().postLogin(loginStructure)
+        .enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, Response<Object> response) {
+                if(response.isSuccessful()){
+                    goToMainActivity();
+                }
+                else Toast.makeText(LoginActivity.this, "Błędny login lub hasło", Toast.LENGTH_LONG).show();
 
-            //doSomethingElse();
-        }
-        JSONObject logindata = new JSONObject();
-        try {
-            logindata.put("login", username);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        try {
-            logindata.put("password", password);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        String server_url = "http://192.168.1.24:8081/login";
-        Log.e("Tag", logindata.toString());
-        new RaportOperation().execute(server_url, logindata.toString());
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                Log.i("Error", t.getMessage());
+                Toast.makeText(LoginActivity.this, "Nie można się połączyć z serwerem", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
-    public void doSomethingElse() {
+    public void goToMainActivity() {
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
         LoginActivity.this.finish();
-    }
-
-    private class RaportOperation extends AsyncTask<String, Void, String> {
-
-        private String jsonResponse;
-        private ProgressDialog dialog = new ProgressDialog(LoginActivity.this);
-
-        @Override
-        protected String doInBackground(String... params) {
-            String data = "";
-
-            HttpURLConnection httpURLConnection = null;
-            try {
-
-                httpURLConnection = (HttpURLConnection) new URL(params[0]).openConnection();
-                httpURLConnection.setRequestMethod("POST");
-
-                httpURLConnection.setDoOutput(true);
-
-                DataOutputStream wr = new DataOutputStream(httpURLConnection.getOutputStream());
-                wr.writeBytes("PostData=" + params[1]);
-                wr.flush();
-                wr.close();
-
-                InputStream in = httpURLConnection.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(in);
-
-                int inputStreamData = inputStreamReader.read();
-                while (inputStreamData != -1) {
-                    char current = (char) inputStreamData;
-                    inputStreamData = inputStreamReader.read();
-                    data += current;
-                }
-                receivedata(httpURLConnection);
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                if (httpURLConnection != null) {
-                    httpURLConnection.disconnect();
-                }
-            }
-
-            return data;
-        }
-
-        private void receivedata(HttpURLConnection connection) throws Exception {
-            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-
-            String returnString = "";
-            StringBuilder allData = new StringBuilder("");
-
-            while ((returnString = in.readLine()) != null) {
-                allData.append(returnString);
-            }
-            in.close();
-
-            Log.e("TAG", allData.toString());
-        }
-
-        protected void onPostExecute(String result) {
-            Log.e("TAG", result);
-            if (result.contains("accepted")) {
-                doSomethingElse();
-            }
-            else {
-                Toast.makeText(LoginActivity.this, "Błędny login lub hasło", Toast.LENGTH_LONG).show();
-            }
-        }
     }
 }
