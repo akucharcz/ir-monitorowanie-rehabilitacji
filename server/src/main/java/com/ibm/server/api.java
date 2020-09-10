@@ -1,18 +1,23 @@
 package com.ibm.server;
-
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-@RestController
+@SpringBootApplication
+//@RestController
+@Controller
 @RequiredArgsConstructor
 public class api {
+    @GetMapping("/")
+    public String index() {
 
+        return "index";
+    }
     private final LoginController loginController;
     private UserService userService;
+
     @PostMapping("/login")
     public String patientLogin(@RequestBody LoginStructure loginStructure) {
         List<LoginStructure> usersList = loginController.getAllLogins();

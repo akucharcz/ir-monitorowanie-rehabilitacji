@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-@Document
+@Document//model danych
 class TrainingDataStructure {
     @Id
     private String id = null; // mongo sam doda
