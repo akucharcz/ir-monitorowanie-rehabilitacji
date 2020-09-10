@@ -19,16 +19,15 @@ public class api {
     private UserService userService;
 
     @PostMapping("/login")
-    public String patientLogin(@RequestBody LoginStructure loginStructure) {
+    public LoginStructure patientLogin(@RequestBody LoginStructure loginStructure) {
         List<LoginStructure> usersList = loginController.getAllLogins();
         System.out.println(usersList.size());
         for (LoginStructure testowylogin : usersList) {
             if (testowylogin.getLogin().equals(loginStructure.getLogin()) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
-                return "Login accepted";
+                return  testowylogin;
             }
         }
-        loginController.saveLogin(loginStructure);
-        return "Created new account";
+       return loginController.saveLogin(loginStructure);
     }
     private final TrainingController trainingController;
 

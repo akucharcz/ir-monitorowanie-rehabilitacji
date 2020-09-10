@@ -1,8 +1,9 @@
 package com.ibm.server;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Component
 @RequiredArgsConstructor
@@ -10,9 +11,9 @@ public class TrainingController {
 
     private final TrainingRepository trainingRepository;
 
-    public TrainingDataStructure saveTraining(TrainingDataStructure trainingDataStructure)
-    {
-       return trainingRepository.save(trainingDataStructure);
+    @PostMapping("/training")
+    public TrainingDataStructure saveTraining(@RequestBody TrainingDataStructure trainingDataStructure) {
+        return trainingRepository.save(trainingDataStructure);
     }
 
 }
