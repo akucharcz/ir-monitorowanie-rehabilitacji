@@ -17,7 +17,11 @@ public class api {
     }
     private final LoginController loginController;
     private UserService userService;
+    @GetMapping("/login.html")
+    public String login() {
 
+        return "login";
+    }
     @PostMapping("/login")
     public LoginStructure patientLogin(@RequestBody LoginStructure loginStructure) {
         List<LoginStructure> usersList = loginController.getAllLogins();
