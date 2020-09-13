@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../../ir-monitorowanie-rehabilitacji/gen" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../../ir-monitorowanie-rehabilitacji/gen" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/../../ir-monitorowanie-rehabilitacji/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/../../ir-monitorowanie-rehabilitacji/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/../../ir-monitorowanie-rehabilitacji/assets" />
+        <option name="LIBS_FOLDER_RELATIVE_PATH" value="/../../ir-monitorowanie-rehabilitacji/libs" />
+        <option name="PROGUARD_LOGS_FOLDER_RELATIVE_PATH" value="/../../ir-monitorowanie-rehabilitacji/proguard_logs" />
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
-    <orderEntry type="inheritedJdk" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" generated="true" />
+      <excludeFolder url="file://$MODULE_DIR$/.git" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/README.md" />
+      <excludeFolder url="file://$MODULE_DIR$/android" />
+      <excludeFolder url="file://$MODULE_DIR$/arduino" />
+      <excludeFolder url="file://$MODULE_DIR$/frontend" />
+      <excludeFolder url="file://$MODULE_DIR$/server" />
+    </content>
+    <orderEntry type="jdk" jdkName="14" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

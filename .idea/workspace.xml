@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="587e6859-2598-464c-a140-753a3676d76f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ir-monitorowanie-rehabilitacji.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ir-monitorowanie-rehabilitacji.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +40,13 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/pom.xml" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -50,8 +56,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599406240850</updated>
+      <workItem from="1599916586907" duration="1370000" />
+      <workItem from="1599918152968" duration="949000" />
+      <workItem from="1599919142309" duration="2457000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -66,13 +78,23 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="242" key="FileChooserDialogImpl" timestamp="1599408031841">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="475" y="127" key="#Project_Structure" timestamp="1599922126437">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="475" y="127" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1599922126437" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599921668646">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599921668646" />
+    <state x="582" y="474" key="FileChooserDialogImpl" timestamp="1599921641464">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="582" y="474" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599921641464" />
     <state x="740" y="242" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1599408031841" />
-    <state x="461" y="170" key="SettingsEditor" timestamp="1599406506051">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="461" y="168" key="SettingsEditor" timestamp="1599923004978">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="461" y="168" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599923004978" />
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1599406506051" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1599408016191">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -82,5 +104,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="342" y="186" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1599406479383" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1599917699272">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599917699272" />
   </component>
 </project>
