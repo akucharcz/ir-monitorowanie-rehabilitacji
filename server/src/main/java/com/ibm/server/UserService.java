@@ -1,5 +1,7 @@
 package com.ibm.server;
 
+import com.ibm.server.model.LoginStructure;
+
 import java.util.ArrayList;
 import java.util.List;
 

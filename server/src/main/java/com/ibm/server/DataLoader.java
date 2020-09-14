@@ -1,5 +1,6 @@
 package com.ibm.server;
 
+import com.ibm.server.model.TrainingDataStructure;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;

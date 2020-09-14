@@ -1,4 +1,4 @@
-package com.ibm.server;
+package com.ibm.server.model;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
@@ -14,7 +14,7 @@ import java.util.List;
 @Setter
 @Builder
 @Document
-class TrainingDataStructure {
+public class TrainingDataStructure {
     @Id
     private String id = null; // mongo sam doda
     private List<Integer> emgData = new ArrayList<>();

@@ -1,4 +1,4 @@
-package com.ibm.server;
+package com.ibm.server.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +16,7 @@ import java.util.List;
 @Getter
 @Setter
 @Document
-class ChartStructure {
+public class ChartStructure {
     private String login;
     private String period;
 }

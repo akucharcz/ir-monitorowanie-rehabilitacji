@@ -1,7 +1,8 @@
 package com.ibm.server;
+import com.ibm.server.model.ChartStructure;
+import com.ibm.server.model.LoginStructure;
+import com.ibm.server.model.TrainingDataStructure;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.Duration;
@@ -11,22 +12,12 @@ import java.util.List;
 
 import static java.util.concurrent.TimeUnit.*;
 
-@SpringBootApplication
 @RestController
-@Controller
 @RequiredArgsConstructor
 public class api {
-    @GetMapping("/")
-    public String index() {
 
-        return "index";
-    }
     private final LoginController loginController;
-    @GetMapping("/login.html")
-    public String login() {
 
-        return "login";
-    }
     @PostMapping("/login")
     public LoginStructure patientLogin(@RequestBody LoginStructure loginStructure) {
         List<LoginStructure> usersList = loginController.getAllLogins();

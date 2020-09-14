@@ -1,7 +1,7 @@
 package com.ibm.server;
 
+import com.ibm.server.model.LoginStructure;
 import lombok.RequiredArgsConstructor;
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

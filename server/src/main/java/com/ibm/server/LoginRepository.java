@@ -1,6 +1,6 @@
 package com.ibm.server;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import com.ibm.server.model.LoginStructure;
 import org.springframework.data.repository.CrudRepository;
 
 public interface LoginRepository extends CrudRepository<LoginStructure, String> {
