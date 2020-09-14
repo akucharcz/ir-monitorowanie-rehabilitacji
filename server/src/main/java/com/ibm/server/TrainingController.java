@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.List;
+
 @Component
 @RequiredArgsConstructor
 public class TrainingController {
@@ -16,4 +18,7 @@ public class TrainingController {
         return trainingRepository.save(trainingDataStructure);
     }
 
+    public List<TrainingDataStructure> getAllTrainings() {
+        return (List<TrainingDataStructure>) trainingRepository.findAll();
+    }
 }
