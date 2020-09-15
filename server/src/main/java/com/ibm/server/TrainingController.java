@@ -1,6 +1,7 @@
 package com.ibm.server;
 
 import com.ibm.server.model.TrainingDataStructure;
+import com.ibm.server.repository.TrainingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
