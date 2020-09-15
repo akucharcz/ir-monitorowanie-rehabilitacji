@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,7 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="587e6859-2598-464c-a140-753a3676d76f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ir-monitorowanie-rehabilitacji.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ir-monitorowanie-rehabilitacji.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +35,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1h8wtEdBpQFmKKzvsVdOjocW9am" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -42,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -78,19 +90,41 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="475" y="127" key="#Project_Structure" timestamp="1599922126437">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="475" y="128" key="#Project_Structure" timestamp="1600110750776">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="475" y="127" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1599922126437" />
+    <state x="475" y="128" key="#Project_Structure/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1600110750776" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599921668646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599921668646" />
-    <state x="582" y="474" key="FileChooserDialogImpl" timestamp="1599921641464">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="681" y="214" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1600110614852">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="681" y="214" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1600110614852" />
+    <state x="582" y="479" key="FileChooserDialogImpl" timestamp="1600110790051">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="582" y="474" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599921641464" />
+    <state x="582" y="479" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1600110790051" />
     <state x="740" y="242" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1599408031841" />
+    <state width="1727" height="294" key="GridCell.Tab.0.bottom" timestamp="1600110791451">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1727" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1600110791451" />
+    <state width="1727" height="294" key="GridCell.Tab.0.center" timestamp="1600110791451">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1727" height="294" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1600110791451" />
+    <state width="1727" height="294" key="GridCell.Tab.0.left" timestamp="1600110791451">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1727" height="294" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1600110791451" />
+    <state width="1727" height="294" key="GridCell.Tab.0.right" timestamp="1600110791451">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1727" height="294" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1600110791451" />
     <state x="461" y="168" key="SettingsEditor" timestamp="1599923004978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -108,5 +142,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599917699272" />
+    <state x="623" y="227" key="search.everywhere.popup" timestamp="1600110553351">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1600110553351" />
   </component>
 </project>

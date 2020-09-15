@@ -1,12 +1,15 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en-US">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="ISO-8859-1" />
 		<title>Pacjent &#8211; physiotherapy app</title>
 <link rel='dns-prefetch' href='//www.gstatic.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="physiotherapy app &raquo; Feed" href="http://physiotherapy-app/" />
 <link rel="alternate" type="application/rss+xml" title="physiotherapy app &raquo; Comments Feed" href="physiotherapy-app/?feed=comments-rss2" />
+	<link rel="stylesheet"
+		  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 		<script>
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/127.0.0.1\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"}};
 			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -66,7 +69,7 @@ var guaven_sqlcharts_notice_dismissed = {"action":"guaven_sqlcharts_onboarding_n
                         display:none !important;
                 }
                 </style><style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style media="print">#wpadminbar { display:none; }</style>
-	
+
 			<style id="wp-custom-css">
 			button.tml-button{
 	    font-family: "Varela Round", Sans-serif;
@@ -87,11 +90,11 @@ var guaven_sqlcharts_notice_dismissed = {"action":"guaven_sqlcharts_onboarding_n
 	text-align: center;
 }
 input{
-	font-family: "Varela Round", Sans-serif; 
+	font-family: "Varela Round", Sans-serif;
 }
 
 .wpac-custom-form .tml-button:hover{
-	background-color: #60ACCC;	
+	background-color: #60ACCC;
 	color: #FFFFFF;
 }
 .wpac-custom-login .elementor-tab-desktop-title{
@@ -101,21 +104,21 @@ input{
 	text-align: center;
 }
 body{
-	font-family: "Varela Round", Sans-serif; 
+	font-family: "Varela Round", Sans-serif;
 }
 
 .erf-container button {
     font-family: "Varela Round", Sans-serif;
 		background-color: #FFFFFF;
     border-style: solid;
-		border-color: #60ACCC; 
+		border-color: #60ACCC;
     border-width: 2px 2px 2px 2px;
     border-radius: 23px 23px 23px 23px;
 		font-size: 15px;
 		color: #54595F;
 }
 .erf-container button:hover{
-	background-color: #60ACCC;	
+	background-color: #60ACCC;
 	color: #FFFFFF;
 }
 .social-media-icons {
@@ -124,7 +127,7 @@ body{
 </style>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
 <body class="page-template page-template-elementor_canvas page page-id-189 page-child parent-pageid-74 logged-in admin-bar no-customize-support wp-embed-responsive ehf-template-twentynineteen ehf-stylesheet-twentynineteen singular image-filters-enabled elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-189">
-			
+
 
 				<div data-elementor-type="wp-page" data-elementor-id="189" class="elementor elementor-189" data-elementor-settings="[]">
 			<div class="elementor-inner">
@@ -193,19 +196,56 @@ body{
 					<div class="elementor-widget-wrap">
 				<div class="elementor-element elementor-element-751b254 elementor-widget elementor-widget-heading" data-id="751b254" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h4 class="elementor-heading-title elementor-size-default">Postęp leczenia</h4>		</div>
+			<h4 class="elementor-heading-title elementor-size-default">Ostatnia godzina</h4>		</div>
 				</div>
-				<div class="elementor-element elementor-element-f698656 elementor-widget elementor-widget-progress" data-id="f698656" data-element_type="widget" data-widget_type="progress.default">
-				<div class="elementor-widget-container">
-			
-		<div class="elementor-progress-wrapper" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="64" aria-valuetext="">
-			<div class="elementor-progress-bar" data-max="64">
-				<span class="elementor-progress-text"></span>
-									<span class="elementor-progress-percentage">64%</span>
-							</div>
-		</div>
-				</div>
-				</div>
+
+
+						<div class="container">
+							<div id="container"
+								 style="width: 550px; height: 400px; margin: 0 auto"></div>
+						</div>
+						<script
+								src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+						<!-- Latest compiled and minified JavaScript -->
+						<script
+								src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+						<script src="https://code.highcharts.com/highcharts.js"></script>
+
+						<script th:inline="javascript">
+    $(function(){
+    Highcharts.chart('container', {
+        chart: {
+            type: 'areaspline'
+        },
+        title: {
+            text: 'Godzina'
+        },
+
+        xAxis: {
+            categories: [[${surveyMap.keySet()}]],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            max:100,
+            title: {
+                text: 'Wartości EMG'
+            }
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'EMG',
+            data: [[${surveyMap.values()}]]
+        }]
+    });
+    });
+</script>
+
 				<div class="elementor-element elementor-element-7c8f8f8 elementor-widget elementor-widget-divider" data-id="7c8f8f8" data-element_type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-divider">
@@ -214,6 +254,55 @@ body{
 		</div>
 				</div>
 				</div>
+						<div class="elementor-element elementor-element-275a639 elementor-widget elementor-widget-heading" data-id="275a639" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h4 class="elementor-heading-title elementor-size-default">Ostatni dzień</h4>		</div>
+							<div class="container2">
+								<div id="container2"
+									 style="width: 550px; height: 400px; margin: 0 auto"></div>
+							</div>
+							<script
+									src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+							<!-- Latest compiled and minified JavaScript -->
+							<script
+									src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+							<script src="https://code.highcharts.com/highcharts.js"></script>
+
+							<script th:inline="javascript">
+    $(function(){
+    Highcharts.chart('container2', {
+        chart: {
+            type: 'areaspline'
+        },
+        title: {
+            text: 'Dzień'
+        },
+
+        xAxis: {
+            categories: [[${surveyMap.keySet()}]],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            max:100,
+            title: {
+                text: 'Wartości EMG'
+            }
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'EMG',
+            data: [[${surveyMap.values()}]]
+        }]
+    });
+    });
+</script>
+						</div>
 						</div>
 			</div>
 		</div>
@@ -222,54 +311,114 @@ body{
 					<div class="elementor-widget-wrap">
 				<div class="elementor-element elementor-element-dc61cd8 elementor-widget elementor-widget-heading" data-id="dc61cd8" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h4 class="elementor-heading-title elementor-size-default">Dane kontaktowe</h4>		</div>
+			<h4 class="elementor-heading-title elementor-size-default">Ostatni tydzień</h4>		</div>
 				</div>
-				<div class="elementor-element elementor-element-ca5fd4a elementor-widget elementor-widget-text-editor" data-id="ca5fd4a" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><p><strong>Imię: </strong>Jan</p><p><strong>Nazwisko: </strong>Kowalski</p><p><strong>Wiek:</strong> 18 lat</p><p><strong>Data urodzenia:</strong> 01.01.2002</p><p><strong>Email:</strong> jankowalski2wp.pl</p><p><strong>Numer telefonu: </strong>788-001-004</p></div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-8456253 elementor-mobile-align-center elementor-align-center elementor-widget elementor-widget-button" data-id="8456253" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-button-wrapper">
-			<a href="#" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-pulse-grow" role="button">
-						<span class="elementor-button-content-wrapper">
-						
-						<span class="elementor-button-text">Edytuj</span>
-		</span>
-					</a>
-		</div>
-				</div>
-				</div>
+						<div class="container3">
+							<div id="container3"
+								 style="width: 550px; height: 400px; margin: 0 auto"></div>
+						</div>
+						<script
+								src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+						<!-- Latest compiled and minified JavaScript -->
+						<script
+								src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+						<script src="https://code.highcharts.com/highcharts.js"></script>
+
+						<script th:inline="javascript">
+    $(function(){
+    Highcharts.chart('container3', {
+        chart: {
+            type: 'areaspline'
+        },
+        title: {
+            text: 'Tydzień'
+        },
+
+        xAxis: {
+            categories: [[${surveyMap.keySet()}]],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            max:100,
+            title: {
+                text: 'Wartości EMG'
+            }
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'EMG',
+            data: [[${surveyMap.values()}]]
+        }]
+    });
+    });
+</script>
+
 				<div class="elementor-element elementor-element-26754e6 elementor-widget elementor-widget-divider" data-id="26754e6" data-element_type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-divider">
 			<span class="elementor-divider-separator">
+
+
 						</span>
 		</div>
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-275a639 elementor-widget elementor-widget-heading" data-id="275a639" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h4 class="elementor-heading-title elementor-size-default">Terapia</h4>		</div>
+			<h4 class="elementor-heading-title elementor-size-default">Ostatni miesiąc</h4>		</div>
 				</div>
-				<div class="elementor-element elementor-element-e37b1ef elementor-widget elementor-widget-text-editor" data-id="e37b1ef" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><p><strong>Data: </strong>18.05.2020 <strong>&#8211;</strong> 18.11.2020</p><p><strong>Zalecane ćwiczenia:</strong> 1, 3</p><p><strong>Status: </strong>w trakcie</p></div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-28a70b3 elementor-mobile-align-center elementor-align-center elementor-widget elementor-widget-button" data-id="28a70b3" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-button-wrapper">
-			<a href="#" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-pulse-grow" role="button">
-						<span class="elementor-button-content-wrapper">
-						
-						<span class="elementor-button-text">Edytuj</span>
-		</span>
-					</a>
-		</div>
-				</div>
-				</div>
+
+						<div class="container4">
+							<div id="container4"
+								 style="width: 550px; height: 400px; margin: 0 auto"></div>
+						</div>
+						<script
+								src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+						<!-- Latest compiled and minified JavaScript -->
+						<script
+								src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+						<script src="https://code.highcharts.com/highcharts.js"></script>
+
+						<script th:inline="javascript">
+    $(function(){
+    Highcharts.chart('container4', {
+        chart: {
+            type: 'areaspline'
+        },
+        title: {
+            text: 'Miesiąc'
+        },
+
+        xAxis: {
+            categories: [[${surveyMap.keySet()}]],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            max:100,
+            title: {
+                text: 'Wartości EMG'
+            }
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'EMG',
+            data: [[${surveyMap.values()}]]
+        }]
+    });
+    });
+</script>
 						</div>
 			</div>
 		</div>
@@ -385,6 +534,7 @@ body{
 		</div>
 	<# } #>
 </script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script src='css/js/hoverintent-js.min.js?ver=2.2.1' id='hoverintent-js-js'></script>
 <script src='css/js/admin-bar.min.js?ver=5.5.1' id='admin-bar-js'></script>
 <script id='theme-my-login-js-extra'>
