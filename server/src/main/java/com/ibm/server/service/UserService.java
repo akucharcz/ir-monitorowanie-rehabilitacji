@@ -1,10 +1,25 @@
 package com.ibm.server.service;
 
-import org.springframework.security.core.userdetails.UserDetailsService;
+import com.ibm.server.repository.LoginRepository;
+import com.ibm.server.model.LoginStructure;
 
-import com.ibm.server.model.User;
-import com.ibm.server.web.dto.UserRegistrationDto;
+import java.util.ArrayList;
+import java.util.List;
 
-public interface UserService extends UserDetailsService{
-	User save(UserRegistrationDto registrationDto);
+public class UserService {
+    private final LoginRepository loginRepository;
+
+    public UserService(LoginRepository loginRepository) {
+        this.loginRepository = loginRepository;
+    }
+
+    public List<LoginStructure> findAll() {
+
+        var it = loginRepository.findAll();
+
+        var users = new ArrayList<LoginStructure>();
+        it.forEach(users::add);
+
+        return users;
+    }
 }

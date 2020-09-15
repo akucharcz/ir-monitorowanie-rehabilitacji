@@ -1,824 +1,408 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <title>Pacjenci &#8211; physiotherapy app</title>
-    <link rel='dns-prefetch' href='//www.gstatic.com'/>
-    <link rel='dns-prefetch' href='//s.w.org'/>
-    <link rel="alternate" type="application/rss+xml" title="physiotherapy app &raquo; Feed"
-          href="http://127.0.0.1/wordpress"/>
-    <link rel="alternate" type="application/rss+xml" title="physiotherapy app &raquo; Comments Feed"
-          href="physiotherapy-app/?feed=comments-rss2"/>
-    <script>
-        window._wpemojiSettings = {
-            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/",
-            "ext": ".png",
-            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/",
-            "svgExt": ".svg",
-            "source": {"concatemoji": "http:\/\/127.0.0.1\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"}
-        };
-        !function (e, a, t) {
-            var r, n, o, i, p = a.createElement("canvas"), s = p.getContext && p.getContext("2d");
-
-            function c(e, t) {
-                var a = String.fromCharCode;
-                s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, e), 0, 0);
-                var r = p.toDataURL();
-                return s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, t), 0, 0), r === p.toDataURL()
-            }
-
-            function l(e) {
-                if (!s || !s.fillText) return !1;
-                switch (s.textBaseline = "top", s.font = "600 32px Arial", e) {
-                    case"flag":
-                        return !c([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) && (!c([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !c([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]));
-                    case"emoji":
-                        return !c([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212])
+	<meta charset="UTF-8">
+		<title>Pacjenci &#8211; physiotherapy app</title>
+<link rel='dns-prefetch' href='//www.gstatic.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="physiotherapy app &raquo; Feed" href="http://127.0.0.1/wordpress" />
+<link rel="alternate" type="application/rss+xml" title="physiotherapy app &raquo; Comments Feed" href="physiotherapy-app/?feed=comments-rss2" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/127.0.0.1\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='css/dashicons.min.css?ver=5.5.1' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='css/admin-bar.min.css?ver=5.5.1' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='css/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.7.0' media='all' />
+<link rel='stylesheet' id='elementor-common-css'  href='css/plugins/elementor/assets/css/common.min.css?ver=2.9.14' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='css/dist/block-library/style.min.css?ver=5.5.1' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='css/dist/block-library/theme.min.css?ver=5.5.1' media='all' />
+<link rel='stylesheet' id='guaven_sqlcharts_main_style-css'  href='css/plugins/sql-chart-builder/asset/guaven_sqlcharts.css?ver=2.2.0' media='all' />
+<link rel='stylesheet' id='theme-my-login-css'  href='css/plugins/theme-my-login/assets/styles/theme-my-login.min.css?ver=7.1.1' media='all' />
+<link rel='stylesheet' id='hfe-style-css'  href='css/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.5.3' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href='css/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.14' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='css/plugins/elementor/assets/css/frontend.min.css?ver=2.9.14' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href='css/uploads/elementor/css/global.css?ver=1598368246' media='all' />
+<link rel='stylesheet' id='elementor-post-74-css'  href='css/uploads/elementor/css/post-74.css?ver=1599165201' media='all' />
+<link rel='stylesheet' id='hfe-widgets-style-css'  href='css/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.5.3' media='all' />
+<link rel='stylesheet' id='wpforms-admin-bar-css'  href='css/plugins/wpforms-lite/assets/css/admin-bar.min.css?ver=1.6.2.2' media='all' />
+<link rel='stylesheet' id='twentynineteen-style-css'  href='css/themes/twentynineteen/style.css?ver=1.7' media='all' />
+<link rel='stylesheet' id='twentynineteen-print-style-css'  href='css/themes/twentynineteen/print.css?ver=1.7' media='print' />
+<link rel='stylesheet' id='fontawesome47-css'  href='css/plugins/clever-mega-menu-for-elementor/assets/vendor/font-awesome/font-awesome.min.css?ver=4.7.0' media='all' />
+<link rel='stylesheet' id='cleverfont-css'  href='css/plugins/clever-mega-menu-for-elementor/assets/vendor/cleverfont/style.min.css?ver=1.9' media='all' />
+<link rel='stylesheet' id='cmm4e-menu-skin-default-menu-skin-461836-css'  href='css/uploads/cmm4e/cmm4e-menu-skin-default-menu-skin-461836.min.css?ver=1.1.2' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CVarela+Round%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.5.1' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css'  href='css/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css'  href='css/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.12.0' media='all' />
+<script src='css/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<script id='guaven_sqlcharts_chartjs-js-extra'>
+var guaven_sqlcharts_notice_dismissed = {"action":"guaven_sqlcharts_onboarding_notice_dismissed","nonce":"7d070bc256"};
+</script>
+<script src='css/plugins/sql-chart-builder/asset/bundle.min.js?ver=2.2.0' id='guaven_sqlcharts_chartjs-js'></script>
+<script src='https://www.gstatic.com/charts/loader.js?ver=5.5.1' id='guaven_sqlcharts_googlechart-js'></script>
+<link rel="https://api.w.org/" href="physiotherapy-app/index.php?rest_route=/" /><link rel="alternate" type="application/json" href="physiotherapy-app/index.php?rest_route=/wp/v2/pages/74" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="physiotherapy-app/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="physiotherapy-app/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.5.1" />
+<link rel="canonical" href="physiotherapy-app/?page_id=74" />
+<link rel='shortlink' href='physiotherapy-app/?p=74' />
+<link rel="alternate" type="application/json+oembed" href="physiotherapy-app/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2F127.0.0.1%2Fwordpress%2F%3Fpage_id%3D74" />
+<link rel="alternate" type="text/xml+oembed" href="physiotherapy-app/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2F127.0.0.1%2Fwordpress%2F%3Fpage_id%3D74&#038;format=xml" />
+<style type='text/css'> .ae_data .elementor-editor-element-setting {
+                        display:none !important;
                 }
-                return !1
-            }
+                </style><style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style media="print">#wpadminbar { display:none; }</style>
 
-            function d(e) {
-                var t = a.createElement("script");
-                t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
-            }
+			<style id="wp-custom-css">
+			button.tml-button{
+	    font-family: "Varela Round", Sans-serif;
+		background-color: #FFFFFF;
+    border-style: solid;
+		border-color: #60ACCC;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 23px 23px 23px 23px;
+		font-size: 15px;
+		color: #54595F;
+}
 
-            for (i = Array("flag", "emoji"), t.supports = {
-                everything: !0,
-                everythingExceptFlag: !0
-            }, o = 0; o < i.length; o++) t.supports[i[o]] = l(i[o]), t.supports.everything = t.supports.everything && t.supports[i[o]], "flag" !== i[o] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[i[o]]);
-            t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () {
-                t.DOMReady = !0
-            }, t.supports.everything || (n = function () {
-                t.readyCallback()
-            }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () {
-                "complete" === a.readyState && t.readyCallback()
-            })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji), d(r.wpemoji)))
-        }(window, document, window._wpemojiSettings);
-    </script>
-    <style>
-        img.wp-smiley,
-        img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 .07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important;
-        }
-    </style>
-    <link rel='stylesheet' id='dashicons-css' href='css/dashicons.min.css?ver=5.5.1' media='all'/>
-    <link rel='stylesheet' id='admin-bar-css' href='css/admin-bar.min.css?ver=5.5.1' media='all'/>
-    <link rel='stylesheet' id='elementor-icons-css'
-          href='css/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.7.0' media='all'/>
-    <link rel='stylesheet' id='elementor-common-css' href='css/plugins/elementor/assets/css/common.min.css?ver=2.9.14'
-          media='all'/>
-    <link rel='stylesheet' id='wp-block-library-css' href='css/dist/block-library/style.min.css?ver=5.5.1' media='all'/>
-    <link rel='stylesheet' id='wp-block-library-theme-css' href='css/dist/block-library/theme.min.css?ver=5.5.1'
-          media='all'/>
-    <link rel='stylesheet' id='guaven_sqlcharts_main_style-css'
-          href='css/plugins/sql-chart-builder/asset/guaven_sqlcharts.css?ver=2.2.0' media='all'/>
-    <link rel='stylesheet' id='theme-my-login-css'
-          href='css/plugins/theme-my-login/assets/styles/theme-my-login.min.css?ver=7.1.1' media='all'/>
-    <link rel='stylesheet' id='hfe-style-css'
-          href='css/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.5.3' media='all'/>
-    <link rel='stylesheet' id='elementor-animations-css'
-          href='css/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.14' media='all'/>
-    <link rel='stylesheet' id='elementor-frontend-css'
-          href='css/plugins/elementor/assets/css/frontend.min.css?ver=2.9.14' media='all'/>
-    <link rel='stylesheet' id='elementor-global-css' href='css/uploads/elementor/css/global.css?ver=1598368246'
-          media='all'/>
-    <link rel='stylesheet' id='elementor-post-74-css' href='css/uploads/elementor/css/post-74.css?ver=1599165201'
-          media='all'/>
-    <link rel='stylesheet' id='hfe-widgets-style-css'
-          href='css/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.5.3' media='all'/>
-    <link rel='stylesheet' id='wpforms-admin-bar-css'
-          href='css/plugins/wpforms-lite/assets/css/admin-bar.min.css?ver=1.6.2.2' media='all'/>
-    <link rel='stylesheet' id='twentynineteen-style-css' href='css/themes/twentynineteen/style.css?ver=1.7'
-          media='all'/>
-    <link rel='stylesheet' id='twentynineteen-print-style-css' href='css/themes/twentynineteen/print.css?ver=1.7'
-          media='print'/>
-    <link rel='stylesheet' id='fontawesome47-css'
-          href='css/plugins/clever-mega-menu-for-elementor/assets/vendor/font-awesome/font-awesome.min.css?ver=4.7.0'
-          media='all'/>
-    <link rel='stylesheet' id='cleverfont-css'
-          href='css/plugins/clever-mega-menu-for-elementor/assets/vendor/cleverfont/style.min.css?ver=1.9' media='all'/>
-    <link rel='stylesheet' id='cmm4e-menu-skin-default-menu-skin-461836-css'
-          href='css/uploads/cmm4e/cmm4e-menu-skin-default-menu-skin-461836.min.css?ver=1.1.2' media='all'/>
-    <link rel='stylesheet' id='google-fonts-1-css'
-          href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CVarela+Round%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.5.1'
-          media='all'/>
-    <link rel='stylesheet' id='elementor-icons-shared-0-css'
-          href='css/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0' media='all'/>
-    <link rel='stylesheet' id='elementor-icons-fa-brands-css'
-          href='css/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.12.0' media='all'/>
-    <script src='css/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
-    <script id='guaven_sqlcharts_chartjs-js-extra'>
-        var guaven_sqlcharts_notice_dismissed = {
-            "action": "guaven_sqlcharts_onboarding_notice_dismissed",
-            "nonce": "7d070bc256"
-        };
-    </script>
-    <script src='css/plugins/sql-chart-builder/asset/bundle.min.js?ver=2.2.0' id='guaven_sqlcharts_chartjs-js'></script>
-    <script src='https://www.gstatic.com/charts/loader.js?ver=5.5.1' id='guaven_sqlcharts_googlechart-js'></script>
-    <link rel="https://api.w.org/" href="physiotherapy-app/index.php?rest_route=/"/>
-    <link rel="alternate" type="application/json" href="physiotherapy-app/index.php?rest_route=/wp/v2/pages/74"/>
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="physiotherapy-app/xmlrpc.php?rsd"/>
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="physiotherapy-app/wp-includes/wlwmanifest.xml"/>
-    <meta name="generator" content="WordPress 5.5.1"/>
-    <link rel="canonical" href="physiotherapy-app/?page_id=74"/>
-    <link rel='shortlink' href='physiotherapy-app/?p=74'/>
-    <link rel="alternate" type="application/json+oembed"
-          href="physiotherapy-app/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2F127.0.0.1%2Fwordpress%2F%3Fpage_id%3D74"/>
-    <link rel="alternate" type="text/xml+oembed"
-          href="physiotherapy-app/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2F127.0.0.1%2Fwordpress%2F%3Fpage_id%3D74&#038;format=xml"/>
-    <style type='text/css'> .ae_data .elementor-editor-element-setting {
-        display: none !important;
-    }
-    </style>
-    <style>.recentcomments a {
-        display: inline !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }</style>
-    <style media="print">#wpadminbar {
-        display: none;
-    }</style>
+.wpac-custom-form ul.tml-links{
+	display: none;
+}
 
-    <style id="wp-custom-css">
-        button.tml-button {
-            font-family: "Varela Round", Sans-serif;
-            background-color: #FFFFFF;
-            border-style: solid;
-            border-color: #60ACCC;
-            border-width: 2px 2px 2px 2px;
-            border-radius: 23px 23px 23px 23px;
-            font-size: 15px;
-            color: #54595F;
-        }
+.wpac-custom-login .elementor-section-wrap{
+	text-align: center;
+}
+input{
+	font-family: "Varela Round", Sans-serif; 
+}
 
-        .wpac-custom-form ul.tml-links {
-            display: none;
-        }
+.wpac-custom-form .tml-button:hover{
+	background-color: #60ACCC;	
+	color: #FFFFFF;
+}
+.wpac-custom-login .elementor-tab-desktop-title{
+	display: inline-block !important
+}
+.wpac-custom-login .elementor-tabs-wrapper{
+	text-align: center;
+}
+body{
+	font-family: "Varela Round", Sans-serif; 
+}
 
-        .wpac-custom-login .elementor-section-wrap {
-            text-align: center;
-        }
-
-        input {
-            font-family: "Varela Round", Sans-serif;
-        }
-
-        .wpac-custom-form .tml-button:hover {
-            background-color: #60ACCC;
-            color: #FFFFFF;
-        }
-
-        .wpac-custom-login .elementor-tab-desktop-title {
-            display: inline-block !important
-        }
-
-        .wpac-custom-login .elementor-tabs-wrapper {
-            text-align: center;
-        }
-
-        body {
-            font-family: "Varela Round", Sans-serif;
-        }
-
-        .erf-container button {
-            font-family: "Varela Round", Sans-serif;
-            background-color: #FFFFFF;
-            border-style: solid;
-            border-color: #60ACCC;
-            border-width: 2px 2px 2px 2px;
-            border-radius: 23px 23px 23px 23px;
-            font-size: 15px;
-            color: #54595F;
-        }
-
-        .erf-container button:hover {
-            background-color: #60ACCC;
-            color: #FFFFFF;
-        }
-
-        .social-media-icons {
-            margin: 10px;
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-</head>
+.erf-container button {
+    font-family: "Varela Round", Sans-serif;
+		background-color: #FFFFFF;
+    border-style: solid;
+		border-color: #60ACCC; 
+    border-width: 2px 2px 2px 2px;
+    border-radius: 23px 23px 23px 23px;
+		font-size: 15px;
+		color: #54595F;
+}
+.erf-container button:hover{
+	background-color: #60ACCC;	
+	color: #FFFFFF;
+}
+.social-media-icons {
+	margin: 10px;		
+</style>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
 <body class="page-template page-template-elementor_canvas page page-id-74 page-parent page-child parent-pageid-70 logged-in admin-bar no-customize-support wp-embed-responsive ehf-template-twentynineteen ehf-stylesheet-twentynineteen singular image-filters-enabled elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-74">
-
-<div data-elementor-type="wp-page" data-elementor-id="74" class="elementor elementor-74" data-elementor-settings="[]">
-    <div class="elementor-inner">
-        <div class="elementor-section-wrap">
-            <section
-                    class="elementor-element elementor-element-7663f42e elementor-section-full_width elementor-section-content-top elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-                    data-id="7663f42e" data-element_type="section">
-                <div class="elementor-container elementor-column-gap-default">
-                    <div class="elementor-row">
-                        <div class="elementor-element elementor-element-2149fe41 elementor-column elementor-col-50 elementor-top-column"
-                             data-id="2149fe41" data-element_type="column">
-                            <div class="elementor-column-wrap  elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-517c2bd2 elementor-widget elementor-widget-image"
-                                         data-id="517c2bd2" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-image">
-                                                <a href="/">
-                                                    <img width="741" height="200" src="css/uploads/2020/08/logo4.jpg"
-                                                         class="attachment-full size-full" alt="" loading="lazy"
-                                                         srcset="css/uploads/2020/08/logo4.jpg 741w, css/uploads/2020/08/logo4-300x81.jpg 300w"
-                                                         sizes="(max-width: 741px) 100vw, 741px"/> </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-1c6874c4 elementor-column elementor-col-50 elementor-top-column"
-                             data-id="1c6874c4" data-element_type="column">
-                            <div class="elementor-column-wrap  elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-5e923deb elementor-widget elementor-widget-wp-widget-nav_menu"
-                                         data-id="5e923deb" data-element_type="widget"
-                                         data-widget_type="wp-widget-nav_menu.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="cmm4e-container cmm4e-wrapper-theme-default-menu-skin-461836">
-                                                <ul id="menu-top-menu"
-                                                    class="cmm4e-theme-default-menu-skin-461836 cmm4e cmm4e-horizontal cmm4e-horizontal-align-right cmm4e-mobile-animation-off-canvas cmm4e-off-canvas-left cmm4e-menu-fade-up"
-                                                    data-config='{&quot;container&quot;:&quot;.cmm4e-container&quot;,&quot;breakpoint&quot;:&quot;992&quot;,&quot;arrows&quot;:{&quot;up&quot;:&quot;fa fa-angle-up&quot;,&quot;down&quot;:&quot;fa fa-angle-down&quot;,&quot;left&quot;:&quot;fa fa-angle-left&quot;,&quot;right&quot;:&quot;fa fa-angle-right&quot;},&quot;desktop&quot;:{&quot;orientation&quot;:&quot;horizontal&quot;},&quot;mobile&quot;:{&quot;animation&quot;:&quot;off-canvas&quot;,&quot;toggleDisable&quot;:0,&quot;togglePosition&quot;:{&quot;top&quot;:&quot;auto&quot;,&quot;right&quot;:&quot;auto&quot;,&quot;bottom&quot;:&quot;auto&quot;,&quot;left&quot;:&quot;auto&quot;},&quot;toggleTrigger&quot;:&quot;&quot;,&quot;toggleIconOpen&quot;:&quot;fa fa-navicon&quot;,&quot;toggleIconClose&quot;:&quot;fa fa-close&quot;,&quot;toggleMenuText&quot;:&quot;&quot;}}'>
-                                                    <li id="cmm4e-menu-item-76"
-                                                        class="cmm4e-menu-item cmm4e-current-menu-item cmm4e-item-depth-0">
-                                                        <a href="patients.html" class="cmm4e-nav-link"><span
-                                                                class="cmm4e-item-label">Pacjenci</span></a></li>
-                                                    <li id="cmm4e-menu-item-80"
-                                                        class="cmm4e-menu-item cmm4e-item-depth-0"><a
-                                                            href="exercises.html" class="cmm4e-nav-link"><span
-                                                            class="cmm4e-item-label">Ćwiczenia</span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section
-                    class="elementor-element elementor-element-9eb5fe1 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-                    data-id="9eb5fe1" data-element_type="section">
-                <div class="elementor-container elementor-column-gap-default">
-                    <div class="elementor-row">
-                        <div class="elementor-element elementor-element-bb6fc37 elementor-column elementor-col-100 elementor-top-column"
-                             data-id="bb6fc37" data-element_type="column">
-                            <div class="elementor-column-wrap  elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-a409470 elementor-widget elementor-widget-heading"
-                                         data-id="a409470" data-element_type="widget"
-                                         data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h3 class="elementor-heading-title elementor-size-xxl">Pacjenci</h3></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section
-                    class="elementor-element elementor-element-0d89ef5 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section"
-                    data-id="0d89ef5" data-element_type="section">
-                <div class="elementor-container elementor-column-gap-default">
-                    <div class="elementor-row">
-                        <div class="elementor-element elementor-element-d52c28f elementor-column elementor-col-25 elementor-top-column"
-                             data-id="d52c28f" data-element_type="column"
-                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-column-wrap  elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-48b5643 elementor-widget elementor-widget-image"
-                                         data-id="48b5643" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-image">
-                                                <img width="150" height="150"
-                                                     src="css/uploads/2020/08/undraw_female_avatar_w3jk-150x150.png"
-                                                     class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-d455d16 elementor-widget elementor-widget-text-editor"
-                                         data-id="d455d16" data-element_type="widget"
-                                         data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-text-editor elementor-clearfix"><h3><a
-                                                    href="single_patient.html">Jan Kowalski</a></h3><h4>Wiek</h4>
-                                                <p>18 lat</p><h4>Data urodzenia</h4>
-                                                <p>01-01-2002</p><h4>Diagnoza</h4>
-                                                <p>Uraz kolana</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-07b781d elementor-column elementor-col-25 elementor-top-column"
-                             data-id="07b781d" data-element_type="column"
-                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-column-wrap  elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-9fd1a6a elementor-widget elementor-widget-image"
-                                         data-id="9fd1a6a" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-image">
-                                                <img width="150" height="150"
-                                                     src="css/uploads/2020/08/undraw_male_avatar_323b-150x150.png"
-                                                     class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-37ab875 elementor-widget elementor-widget-text-editor"
-                                         data-id="37ab875" data-element_type="widget"
-                                         data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-text-editor elementor-clearfix"><h3><a
-                                                    href="single_patient.html">Jan Kowalski</a></h3><h4>Wiek</h4>
-                                                <p>18 lat</p><h4>Data urodzenia</h4>
-                                                <p>01-01-2002</p><h4>Diagnoza</h4>
-                                                <p>Uraz kolana</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-8a29bed elementor-column elementor-col-25 elementor-top-column"
-                             data-id="8a29bed" data-element_type="column"
-                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-column-wrap  elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-12a2ace elementor-widget elementor-widget-image"
-                                         data-id="12a2ace" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-image">
-                                                <img width="150" height="150"
-                                                     src="css/uploads/2020/08/undraw_female_avatar_w3jk-150x150.png"
-                                                     class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-2368377 elementor-widget elementor-widget-text-editor"
-                                         data-id="2368377" data-element_type="widget"
-                                         data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-text-editor elementor-clearfix"><h3><a
-                                                    href="single_patient.html">Jan Kowalski</a></h3><h4>Wiek</h4>
-                                                <p>18 lat</p><h4>Data urodzenia</h4>
-                                                <p>01-01-2002</p><h4>Diagnoza</h4>
-                                                <p>Uraz kolana</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-9f7da5a elementor-column elementor-col-25 elementor-top-column"
-                             data-id="9f7da5a" data-element_type="column"
-                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-column-wrap  elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-35ee41a elementor-widget elementor-widget-image"
-                                         data-id="35ee41a" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-image">
-                                                <img width="150" height="150"
-                                                     src="css/uploads/2020/08/undraw_male_avatar_323b-150x150.png"
-                                                     class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-42387bd elementor-widget elementor-widget-text-editor"
-                                         data-id="42387bd" data-element_type="widget"
-                                         data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-text-editor elementor-clearfix"><h3><a
-                                                    href="single_patient.html">Jan Kowalski</a></h3><h4>Wiek</h4>
-                                                <p>18 lat</p><h4>Data urodzenia</h4>
-                                                <p>01-01-2002</p><h4>Diagnoza</h4>
-                                                <p>Uraz kolana</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section
-                    class="elementor-element elementor-element-365ad052 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-                    data-id="365ad052" data-element_type="section">
-                <div class="elementor-container elementor-column-gap-no">
-                    <div class="elementor-row">
-                        <div class="elementor-element elementor-element-61499af7 elementor-column elementor-col-50 elementor-top-column"
-                             data-id="61499af7" data-element_type="column"
-                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-column-wrap  elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-45dd14f6 elementor-widget elementor-widget-heading"
-                                         data-id="45dd14f6" data-element_type="widget"
-                                         data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h4 class="elementor-heading-title elementor-size-default">Skontaktuj się z
-                                                nami</h4></div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-23b4bd40 elementor-widget elementor-widget-text-editor"
-                                         data-id="23b4bd40" data-element_type="widget"
-                                         data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-text-editor elementor-clearfix"><p>2020 © Joanna
-                                                Bachanowicz, Anna Bruszewska, Andrzej Kucharczyk, Julianna Wichowska,
-                                                Kinga Tańska, Aleksandra Żmijewska.</p>
-                                                <p>All Rights Reserved.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-393d3c2c elementor-column elementor-col-50 elementor-top-column"
-                             data-id="393d3c2c" data-element_type="column"
-                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-column-wrap  elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-478f4c88 elementor-shape-square elementor-widget elementor-widget-social-icons"
-                                         data-id="478f4c88" data-element_type="widget"
-                                         data-widget_type="social-icons.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-social-icons-wrapper">
-                                                <a>
-                                                    <input type="image" id="next" alt="next"
-                                                           src="css/uploads/2020/08/facebook.png" height="50"
-                                                           aria-hidden="true">
-                                                    <span class="social-media-icons"><span
-                                                            class="elementor-screen-only">Facebook</span></span>
-                                                    <i class="fab fa-facebook"></i> </a>
-                                                <a>
-                                                    <input type="image" id="next" alt="next"
-                                                           src="css/uploads/2020/08/instagram.png" height="50"
-                                                           aria-hidden="true">
-                                                    <span class="social-media-icons"><span
-                                                            class="elementor-screen-only">Instagram</span></span>
-                                                    <i class="fab fa-instagram"></i> </a>
-                                                <a href="https://github.com/akucharcz/ir-monitorowanie-rehabilitacji">
-                                                    <input type="image" id="next" alt="next"
-                                                           src="css/uploads/2020/08/github.png" height="50"
-                                                           aria-hidden="true">
-                                                    <span class="social-media-icons"><span
-                                                            class="elementor-screen-only">Github</span></span>
-                                                    <i class="fab fa-github"></i> </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-</div>
-<script type="text/template" id="tmpl-elementor-templates-modal__header">
-    <div class="elementor-templates-modal__header__logo-area"></div>
-    <div class="elementor-templates-modal__header__menu-area"></div>
-    <div class="elementor-templates-modal__header__items-area">
-        <# if ( closeType ) { #>
-        <div class="elementor-templates-modal__header__close elementor-templates-modal__header__close--{{{ closeType }}} elementor-templates-modal__header__item">
-            <# if ( 'skip' === closeType ) { #>
-            <span>Skip</span>
-            <# } #>
-            <i class="eicon-close" aria-hidden="true" title="Close"></i>
-            <span class="elementor-screen-only">Close</span>
-        </div>
-        <# } #>
-        <div id="elementor-template-library-header-tools"></div>
-    </div>
+		
+				<div data-elementor-type="wp-page" data-elementor-id="74" class="elementor elementor-74" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-7663f42e elementor-section-full_width elementor-section-content-top elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7663f42e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2149fe41 elementor-column elementor-col-50 elementor-top-column" data-id="2149fe41" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-517c2bd2 elementor-widget elementor-widget-image" data-id="517c2bd2" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="/">
+							<img width="741" height="200" src="css/uploads/2020/08/logo4.jpg" class="attachment-full size-full" alt="" loading="lazy" srcset="css/uploads/2020/08/logo4.jpg 741w, css/uploads/2020/08/logo4-300x81.jpg 300w" sizes="(max-width: 741px) 100vw, 741px" />								</a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1c6874c4 elementor-column elementor-col-50 elementor-top-column" data-id="1c6874c4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5e923deb elementor-widget elementor-widget-wp-widget-nav_menu" data-id="5e923deb" data-element_type="widget" data-widget_type="wp-widget-nav_menu.default">
+				<div class="elementor-widget-container">
+			<div class="cmm4e-container cmm4e-wrapper-theme-default-menu-skin-461836"><ul id="menu-top-menu" class="cmm4e-theme-default-menu-skin-461836 cmm4e cmm4e-horizontal cmm4e-horizontal-align-right cmm4e-mobile-animation-off-canvas cmm4e-off-canvas-left cmm4e-menu-fade-up" data-config='{&quot;container&quot;:&quot;.cmm4e-container&quot;,&quot;breakpoint&quot;:&quot;992&quot;,&quot;arrows&quot;:{&quot;up&quot;:&quot;fa fa-angle-up&quot;,&quot;down&quot;:&quot;fa fa-angle-down&quot;,&quot;left&quot;:&quot;fa fa-angle-left&quot;,&quot;right&quot;:&quot;fa fa-angle-right&quot;},&quot;desktop&quot;:{&quot;orientation&quot;:&quot;horizontal&quot;},&quot;mobile&quot;:{&quot;animation&quot;:&quot;off-canvas&quot;,&quot;toggleDisable&quot;:0,&quot;togglePosition&quot;:{&quot;top&quot;:&quot;auto&quot;,&quot;right&quot;:&quot;auto&quot;,&quot;bottom&quot;:&quot;auto&quot;,&quot;left&quot;:&quot;auto&quot;},&quot;toggleTrigger&quot;:&quot;&quot;,&quot;toggleIconOpen&quot;:&quot;fa fa-navicon&quot;,&quot;toggleIconClose&quot;:&quot;fa fa-close&quot;,&quot;toggleMenuText&quot;:&quot;&quot;}}'><li id="cmm4e-menu-item-76" class="cmm4e-menu-item cmm4e-current-menu-item cmm4e-item-depth-0"><a href="patients.html" class="cmm4e-nav-link"><span class="cmm4e-item-label">Pacjenci</span></a></li>
+<li id="cmm4e-menu-item-80" class="cmm4e-menu-item cmm4e-item-depth-0"><a href="exercises.html" class="cmm4e-nav-link"><span class="cmm4e-item-label">Ćwiczenia</span></a></li>
+</ul></div>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-9eb5fe1 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9eb5fe1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-bb6fc37 elementor-column elementor-col-100 elementor-top-column" data-id="bb6fc37" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a409470 elementor-widget elementor-widget-heading" data-id="a409470" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-xxl">Pacjenci</h3>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-0d89ef5 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="0d89ef5" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d52c28f elementor-column elementor-col-25 elementor-top-column" data-id="d52c28f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-48b5643 elementor-widget elementor-widget-image" data-id="48b5643" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="150" height="150" src="css/uploads/2020/08/undraw_female_avatar_w3jk-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d455d16 elementor-widget elementor-widget-text-editor" data-id="d455d16" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h3><a href="single_patient.html">Jan Kowalski</a></h3><h4>Wiek</h4><p>18 lat</p><h4>Data urodzenia</h4><p>01-01-2002</p><h4>Diagnoza</h4><p>Uraz kolana</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-07b781d elementor-column elementor-col-25 elementor-top-column" data-id="07b781d" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9fd1a6a elementor-widget elementor-widget-image" data-id="9fd1a6a" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="150" height="150" src="css/uploads/2020/08/undraw_male_avatar_323b-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-37ab875 elementor-widget elementor-widget-text-editor" data-id="37ab875" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h3><a href="single_patient.html">Jan Kowalski</a></h3><h4>Wiek</h4><p>18 lat</p><h4>Data urodzenia</h4><p>01-01-2002</p><h4>Diagnoza</h4><p>Uraz kolana</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-8a29bed elementor-column elementor-col-25 elementor-top-column" data-id="8a29bed" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-12a2ace elementor-widget elementor-widget-image" data-id="12a2ace" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="150" height="150" src="css/uploads/2020/08/undraw_female_avatar_w3jk-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2368377 elementor-widget elementor-widget-text-editor" data-id="2368377" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h3><a href="single_patient.html">Jan Kowalski</a></h3><h4>Wiek</h4><p>18 lat</p><h4>Data urodzenia</h4><p>01-01-2002</p><h4>Diagnoza</h4><p>Uraz kolana</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-9f7da5a elementor-column elementor-col-25 elementor-top-column" data-id="9f7da5a" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-35ee41a elementor-widget elementor-widget-image" data-id="35ee41a" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="150" height="150" src="css/uploads/2020/08/undraw_male_avatar_323b-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-42387bd elementor-widget elementor-widget-text-editor" data-id="42387bd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h3><a href="single_patient.html">Jan Kowalski</a></h3><h4>Wiek</h4><p>18 lat</p><h4>Data urodzenia</h4><p>01-01-2002</p><h4>Diagnoza</h4><p>Uraz kolana</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-365ad052 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="365ad052" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-61499af7 elementor-column elementor-col-50 elementor-top-column" data-id="61499af7" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-45dd14f6 elementor-widget elementor-widget-heading" data-id="45dd14f6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Skontaktuj się z nami</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-23b4bd40 elementor-widget elementor-widget-text-editor" data-id="23b4bd40" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>2020 © Joanna Bachanowicz, Anna Bruszewska, Andrzej Kucharczyk, Julianna Wichowska, Kinga Tańska, Aleksandra Żmijewska.</p><p>All Rights Reserved.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-393d3c2c elementor-column elementor-col-50 elementor-top-column" data-id="393d3c2c" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-478f4c88 elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="478f4c88" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper">
+					<a>
+						<input type="image" id="next" alt="next" src="css/uploads/2020/08/facebook.png" height="50" aria-hidden="true">
+					<span class="social-media-icons"><span class="elementor-screen-only">Facebook</span></span>
+					<i class="fab fa-facebook"></i>				</a>
+					<a>
+						<input type="image" id="next" alt="next" src="css/uploads/2020/08/instagram.png" height="50" aria-hidden="true">
+					<span class="social-media-icons"><span class="elementor-screen-only">Instagram</span></span>
+					<i class="fab fa-instagram"></i>				</a>
+					<a href="https://github.com/akucharcz/ir-monitorowanie-rehabilitacji">
+							<input type="image" id="next" alt="next" src="css/uploads/2020/08/github.png" height="50" aria-hidden="true">
+					<span class="social-media-icons"><span class="elementor-screen-only">Github</span></span>
+					<i class="fab fa-github"></i>				</a>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		<script type="text/template" id="tmpl-elementor-templates-modal__header">
+	<div class="elementor-templates-modal__header__logo-area"></div>
+	<div class="elementor-templates-modal__header__menu-area"></div>
+	<div class="elementor-templates-modal__header__items-area">
+		<# if ( closeType ) { #>
+			<div class="elementor-templates-modal__header__close elementor-templates-modal__header__close--{{{ closeType }}} elementor-templates-modal__header__item">
+				<# if ( 'skip' === closeType ) { #>
+				<span>Skip</span>
+				<# } #>
+				<i class="eicon-close" aria-hidden="true" title="Close"></i>
+				<span class="elementor-screen-only">Close</span>
+			</div>
+		<# } #>
+		<div id="elementor-template-library-header-tools"></div>
+	</div>
 </script>
 
 <script type="text/template" id="tmpl-elementor-templates-modal__header__logo">
-    <span class="elementor-templates-modal__header__logo__icon-wrapper elementor-gradient-logo">
+	<span class="elementor-templates-modal__header__logo__icon-wrapper elementor-gradient-logo">
 		<i class="eicon-elementor"></i>
 	</span>
-    <span class="elementor-templates-modal__header__logo__title">{{{ title }}}</span>
+	<span class="elementor-templates-modal__header__logo__title">{{{ title }}}</span>
 </script>
 <script type="text/template" id="tmpl-elementor-finder">
-    <div id="elementor-finder__search">
-        <i class="eicon-search"></i>
-        <input id="elementor-finder__search__input" placeholder="Type to find anything in Elementor">
-    </div>
-    <div id="elementor-finder__content"></div>
+	<div id="elementor-finder__search">
+		<i class="eicon-search"></i>
+		<input id="elementor-finder__search__input" placeholder="Type to find anything in Elementor">
+	</div>
+	<div id="elementor-finder__content"></div>
 </script>
 
 <script type="text/template" id="tmpl-elementor-finder-results-container">
-    <div id="elementor-finder__no-results">No Results Found</div>
-    <div id="elementor-finder__results"></div>
+	<div id="elementor-finder__no-results">No Results Found</div>
+	<div id="elementor-finder__results"></div>
 </script>
 
 <script type="text/template" id="tmpl-elementor-finder__results__category">
-    <div class="elementor-finder__results__category__title">{{{ title }}}</div>
-    <div class="elementor-finder__results__category__items"></div>
+	<div class="elementor-finder__results__category__title">{{{ title }}}</div>
+	<div class="elementor-finder__results__category__items"></div>
 </script>
 
 <script type="text/template" id="tmpl-elementor-finder__results__item">
-    <a href="{{ url }}" class="elementor-finder__results__item__link">
-        <div class="elementor-finder__results__item__icon">
-            <i class="eicon-{{{ icon }}}"></i>
-        </div>
-        <div class="elementor-finder__results__item__title">{{{ title }}}</div>
-        <# if ( description ) { #>
-        <div class="elementor-finder__results__item__description">- {{{ description }}}</div>
-        <# } #>
-    </a>
-    <# if ( actions.length ) { #>
-    <div class="elementor-finder__results__item__actions">
-        <# jQuery.each( actions, function() { #>
-        <a class="elementor-finder__results__item__action elementor-finder__results__item__action--{{ this.name }}"
-           href="{{ this.url }}" target="_blank">
-            <i class="eicon-{{{ this.icon }}}"></i>
-        </a>
-        <# } ); #>
-    </div>
-    <# } #>
+	<a href="{{ url }}" class="elementor-finder__results__item__link">
+		<div class="elementor-finder__results__item__icon">
+			<i class="eicon-{{{ icon }}}"></i>
+		</div>
+		<div class="elementor-finder__results__item__title">{{{ title }}}</div>
+		<# if ( description ) { #>
+			<div class="elementor-finder__results__item__description">- {{{ description }}}</div>
+		<# } #>
+	</a>
+	<# if ( actions.length ) { #>
+		<div class="elementor-finder__results__item__actions">
+		<# jQuery.each( actions, function() { #>
+			<a class="elementor-finder__results__item__action elementor-finder__results__item__action--{{ this.name }}" href="{{ this.url }}" target="_blank">
+				<i class="eicon-{{{ this.icon }}}"></i>
+			</a>
+		<# } ); #>
+		</div>
+	<# } #>
 </script>
 <script src='css/js/hoverintent-js.min.js?ver=2.2.1' id='hoverintent-js-js'></script>
 <script src='css/js/admin-bar.min.js?ver=5.5.1' id='admin-bar-js'></script>
 <script id='theme-my-login-js-extra'>
-    var themeMyLogin = {"action": "", "errors": []};
+var themeMyLogin = {"action":"","errors":[]};
 </script>
 <script src='css/plugins/theme-my-login/assets/scripts/theme-my-login.min.js?ver=7.1.1' id='theme-my-login-js'></script>
 <script src='css/themes/twentynineteen/js/priority-menu.js?ver=20181214' id='twentynineteen-priority-menu-js'></script>
-<script src='css/themes/twentynineteen/js/touch-keyboard-navigation.js?ver=20181231'
-        id='twentynineteen-touch-navigation-js'></script>
+<script src='css/themes/twentynineteen/js/touch-keyboard-navigation.js?ver=20181231' id='twentynineteen-touch-navigation-js'></script>
 <script src='css/js/jquery/ui/core.min.js?ver=1.11.4' id='jquery-ui-core-js'></script>
 <script src='css/js/jquery/ui/widget.min.js?ver=1.11.4' id='jquery-ui-widget-js'></script>
 <script src='css/js/jquery/ui/mouse.min.js?ver=1.11.4' id='jquery-ui-mouse-js'></script>
 <script src='css/js/jquery/ui/draggable.min.js?ver=1.11.4' id='jquery-ui-draggable-js'></script>
 <script src='css/js/underscore.min.js?ver=1.8.3' id='underscore-js'></script>
 <script src='css/js/backbone.min.js?ver=1.4.0' id='backbone-js'></script>
-<script src='css/plugins/elementor/assets/lib/backbone/backbone.marionette.min.js?ver=2.4.5'
-        id='backbone-marionette-js'></script>
+<script src='css/plugins/elementor/assets/lib/backbone/backbone.marionette.min.js?ver=2.4.5' id='backbone-marionette-js'></script>
 <script src='css/plugins/elementor/assets/lib/backbone/backbone.radio.min.js?ver=1.0.4' id='backbone-radio-js'></script>
-<script src='css/plugins/elementor/assets/js/common-modules.min.js?ver=2.9.14'
-        id='elementor-common-modules-js'></script>
+<script src='css/plugins/elementor/assets/js/common-modules.min.js?ver=2.9.14' id='elementor-common-modules-js'></script>
 <script src='css/js/jquery/ui/position.min.js?ver=1.11.4' id='jquery-ui-position-js'></script>
 <script src='css/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.6' id='elementor-dialog-js'></script>
 <script id='elementor-common-js-before'>
-    var elementorCommonConfig = {
-        "version": "2.9.14",
-        "isRTL": false,
-        "isDebug": false,
-        "activeModules": ["ajax", "finder", "connect"],
-        "urls": {"assets": "http:\/\/127.0.0.1\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},
-        "ajax": {"url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin-ajax.php", "nonce": "d042b5b90d"},
-        "finder": {
-            "data": {
-                "edit": {"title": "Edit", "dynamic": true, "name": "edit"},
-                "general": {
-                    "title": "General",
-                    "dynamic": false,
-                    "items": {
-                        "saved-templates": {
-                            "title": "Saved Templates",
-                            "icon": "library-save",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?post_type=elementor_library&tabs_group=library",
-                            "keywords": ["template", "section", "page", "library"]
-                        },
-                        "system-info": {
-                            "title": "System Info",
-                            "icon": "info-circle-o",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-system-info",
-                            "keywords": ["system", "info", "environment", "elementor"]
-                        },
-                        "role-manager": {
-                            "title": "Role Manager",
-                            "icon": "person",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-role-manager",
-                            "keywords": ["role", "manager", "user", "elementor"]
-                        },
-                        "knowledge-base": {
-                            "title": "Knowledge Base",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=go_knowledge_base_site",
-                            "keywords": ["help", "knowledge", "docs", "elementor"]
-                        }
-                    },
-                    "name": "general"
-                },
-                "create": {
-                    "title": "Create", "dynamic": false, "items": {
-                        "post": {
-                            "title": "Add New Post",
-                            "icon": "plus-circle-o",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=post&_wpnonce=cf651f7eb1",
-                            "keywords": ["post", "page", "template", "new", "create"]
-                        },
-                        "page": {
-                            "title": "Add New Page",
-                            "icon": "plus-circle-o",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=page&_wpnonce=cf651f7eb1",
-                            "keywords": ["post", "page", "template", "new", "create"]
-                        },
-                        "ae_global_templates": {
-                            "title": "Add New AE Template",
-                            "icon": "plus-circle-o",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=ae_global_templates&_wpnonce=cf651f7eb1",
-                            "keywords": ["post", "page", "template", "new", "create"]
-                        },
-                        "cmm4e_menu": {
-                            "title": "Add New Clever Mega Menu Item",
-                            "icon": "plus-circle-o",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=cmm4e_menu&_wpnonce=cf651f7eb1",
-                            "keywords": ["post", "page", "template", "new", "create"]
-                        },
-                        "elementor_library": {
-                            "title": "Add New Template",
-                            "icon": "plus-circle-o",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?post_type=elementor_library#add_new",
-                            "keywords": ["post", "page", "template", "new", "create"]
-                        },
-                        "elementor-hf": {
-                            "title": "Add New Elementor Header Footer & Blocks",
-                            "icon": "plus-circle-o",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor-hf&_wpnonce=cf651f7eb1",
-                            "keywords": ["post", "page", "template", "new", "create"]
-                        }
-                    }, "name": "create"
-                },
-                "site": {
-                    "title": "Site", "dynamic": false, "items": {
-                        "homepage": {
-                            "title": "Homepage",
-                            "url": "http:\/\/127.0.0.1\/wordpress",
-                            "icon": "home-heart",
-                            "keywords": ["home", "page"]
-                        },
-                        "wordpress-dashboard": {
-                            "title": "Dashboard",
-                            "icon": "dashboard",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/",
-                            "keywords": ["dashboard", "wordpress"]
-                        },
-                        "wordpress-menus": {
-                            "title": "Menus",
-                            "icon": "wordpress",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/nav-menus.php",
-                            "keywords": ["menu", "wordpress"]
-                        },
-                        "wordpress-themes": {
-                            "title": "Themes",
-                            "icon": "wordpress",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/themes.php",
-                            "keywords": ["themes", "wordpress"]
-                        },
-                        "wordpress-customizer": {
-                            "title": "Customizer",
-                            "icon": "wordpress",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/customize.php",
-                            "keywords": ["customizer", "wordpress"]
-                        },
-                        "wordpress-plugins": {
-                            "title": "Plugins",
-                            "icon": "wordpress",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/plugins.php",
-                            "keywords": ["plugins", "wordpress"]
-                        },
-                        "wordpress-users": {
-                            "title": "Users",
-                            "icon": "wordpress",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/users.php",
-                            "keywords": ["users", "profile", "wordpress"]
-                        }
-                    }, "name": "site"
-                },
-                "settings": {
-                    "title": "Settings",
-                    "dynamic": false,
-                    "items": {
-                        "general-settings": {
-                            "title": "General Settings",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor",
-                            "keywords": ["general", "settings", "elementor"]
-                        },
-                        "style": {
-                            "title": "Style",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor#tab-style",
-                            "keywords": ["style", "settings", "elementor"]
-                        },
-                        "advanced": {
-                            "title": "Advanced",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor#tab-advanced",
-                            "keywords": ["advanced", "settings", "elementor"]
-                        }
-                    },
-                    "name": "settings"
-                },
-                "tools": {
-                    "title": "Tools",
-                    "dynamic": false,
-                    "items": {
-                        "tools": {
-                            "title": "Tools",
-                            "icon": "tools",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-tools",
-                            "keywords": ["tools", "regenerate css", "safe mode", "debug bar", "sync library", "elementor"]
-                        },
-                        "replace-url": {
-                            "title": "Replace URL",
-                            "icon": "tools",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-replace_url",
-                            "keywords": ["tools", "replace url", "domain", "elementor"]
-                        },
-                        "version-control": {
-                            "title": "Version Control",
-                            "icon": "time-line",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-versions",
-                            "keywords": ["tools", "version", "control", "rollback", "beta", "elementor"]
-                        },
-                        "maintenance-mode": {
-                            "title": "Maintenance Mode",
-                            "icon": "tools",
-                            "url": "http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-maintenance_mode",
-                            "keywords": ["tools", "maintenance", "coming soon", "elementor"]
-                        }
-                    },
-                    "name": "tools"
-                }
-            }, "i18n": {"finder": "Finder"}
-        },
-        "connect": []
-    };
+var elementorCommonConfig = {"version":"2.9.14","isRTL":false,"isDebug":false,"activeModules":["ajax","finder","connect"],"urls":{"assets":"http:\/\/127.0.0.1\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},"ajax":{"url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin-ajax.php","nonce":"d042b5b90d"},"finder":{"data":{"edit":{"title":"Edit","dynamic":true,"name":"edit"},"general":{"title":"General","dynamic":false,"items":{"saved-templates":{"title":"Saved Templates","icon":"library-save","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?post_type=elementor_library&tabs_group=library","keywords":["template","section","page","library"]},"system-info":{"title":"System Info","icon":"info-circle-o","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-system-info","keywords":["system","info","environment","elementor"]},"role-manager":{"title":"Role Manager","icon":"person","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-role-manager","keywords":["role","manager","user","elementor"]},"knowledge-base":{"title":"Knowledge Base","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=go_knowledge_base_site","keywords":["help","knowledge","docs","elementor"]}},"name":"general"},"create":{"title":"Create","dynamic":false,"items":{"post":{"title":"Add New Post","icon":"plus-circle-o","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=post&_wpnonce=cf651f7eb1","keywords":["post","page","template","new","create"]},"page":{"title":"Add New Page","icon":"plus-circle-o","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=page&_wpnonce=cf651f7eb1","keywords":["post","page","template","new","create"]},"ae_global_templates":{"title":"Add New AE Template","icon":"plus-circle-o","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=ae_global_templates&_wpnonce=cf651f7eb1","keywords":["post","page","template","new","create"]},"cmm4e_menu":{"title":"Add New Clever Mega Menu Item","icon":"plus-circle-o","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=cmm4e_menu&_wpnonce=cf651f7eb1","keywords":["post","page","template","new","create"]},"elementor_library":{"title":"Add New Template","icon":"plus-circle-o","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?post_type=elementor_library#add_new","keywords":["post","page","template","new","create"]},"elementor-hf":{"title":"Add New Elementor Header Footer & Blocks","icon":"plus-circle-o","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor-hf&_wpnonce=cf651f7eb1","keywords":["post","page","template","new","create"]}},"name":"create"},"site":{"title":"Site","dynamic":false,"items":{"homepage":{"title":"Homepage","url":"http:\/\/127.0.0.1\/wordpress","icon":"home-heart","keywords":["home","page"]},"wordpress-dashboard":{"title":"Dashboard","icon":"dashboard","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/","keywords":["dashboard","wordpress"]},"wordpress-menus":{"title":"Menus","icon":"wordpress","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/nav-menus.php","keywords":["menu","wordpress"]},"wordpress-themes":{"title":"Themes","icon":"wordpress","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/themes.php","keywords":["themes","wordpress"]},"wordpress-customizer":{"title":"Customizer","icon":"wordpress","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/customize.php","keywords":["customizer","wordpress"]},"wordpress-plugins":{"title":"Plugins","icon":"wordpress","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/plugins.php","keywords":["plugins","wordpress"]},"wordpress-users":{"title":"Users","icon":"wordpress","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/users.php","keywords":["users","profile","wordpress"]}},"name":"site"},"settings":{"title":"Settings","dynamic":false,"items":{"general-settings":{"title":"General Settings","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor","keywords":["general","settings","elementor"]},"style":{"title":"Style","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor#tab-style","keywords":["style","settings","elementor"]},"advanced":{"title":"Advanced","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor#tab-advanced","keywords":["advanced","settings","elementor"]}},"name":"settings"},"tools":{"title":"Tools","dynamic":false,"items":{"tools":{"title":"Tools","icon":"tools","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-tools","keywords":["tools","regenerate css","safe mode","debug bar","sync library","elementor"]},"replace-url":{"title":"Replace URL","icon":"tools","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-replace_url","keywords":["tools","replace url","domain","elementor"]},"version-control":{"title":"Version Control","icon":"time-line","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-versions","keywords":["tools","version","control","rollback","beta","elementor"]},"maintenance-mode":{"title":"Maintenance Mode","icon":"tools","url":"http:\/\/127.0.0.1\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-maintenance_mode","keywords":["tools","maintenance","coming soon","elementor"]}},"name":"tools"}},"i18n":{"finder":"Finder"}},"connect":[]};
 </script>
 <script src='css/plugins/elementor/assets/js/common.min.js?ver=2.9.14' id='elementor-common-js'></script>
 <script id='cmm4e-mega-menu-js-extra'>
-    var cmm4eFrontendConfig = {"isRTL": "", "isMobile": ""};
+var cmm4eFrontendConfig = {"isRTL":"","isMobile":""};
 </script>
-<script src='css/plugins/clever-mega-menu-for-elementor/assets/frontend/js/cmm4e.min.js?ver=1.1.2'
-        id='cmm4e-mega-menu-js'></script>
+<script src='css/plugins/clever-mega-menu-for-elementor/assets/frontend/js/cmm4e.min.js?ver=1.1.2' id='cmm4e-mega-menu-js'></script>
 <script src='css/js/wp-embed.min.js?ver=5.5.1' id='wp-embed-js'></script>
-<script src='css/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.14'
-        id='elementor-frontend-modules-js'></script>
-<script src='css/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'
-        id='elementor-waypoints-js'></script>
+<script src='css/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.14' id='elementor-frontend-modules-js'></script>
+<script src='css/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
 <script src='css/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' id='swiper-js'></script>
 <script src='css/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=2.9.14' id='share-link-js'></script>
 <script id='elementor-frontend-js-before'>
-    var elementorFrontendConfig = {
-        "environmentMode": {"edit": false, "wpPreview": false},
-        "i18n": {
-            "shareOnFacebook": "Share on Facebook",
-            "shareOnTwitter": "Share on Twitter",
-            "pinIt": "Pin it",
-            "downloadImage": "Download image"
-        },
-        "is_rtl": false,
-        "breakpoints": {"xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600},
-        "version": "2.9.14",
-        "urls": {"assets": "http:\/\/127.0.0.1\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},
-        "settings": {
-            "page": [],
-            "general": {
-                "elementor_global_image_lightbox": "yes",
-                "elementor_lightbox_enable_counter": "yes",
-                "elementor_lightbox_enable_fullscreen": "yes",
-                "elementor_lightbox_enable_zoom": "yes",
-                "elementor_lightbox_enable_share": "yes",
-                "elementor_lightbox_title_src": "title",
-                "elementor_lightbox_description_src": "description"
-            },
-            "editorPreferences": []
-        },
-        "post": {
-            "id": 74,
-            "title": "Pacjenci%20%E2%80%93%20physiotherapy%20app",
-            "excerpt": "",
-            "featuredImage": false
-        },
-        "user": {"roles": ["administrator"]}
-    };
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.14","urls":{"assets":"http:\/\/127.0.0.1\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":74,"title":"Pacjenci%20%E2%80%93%20physiotherapy%20app","excerpt":"","featuredImage":false},"user":{"roles":["administrator"]}};
 </script>
 <script src='css/plugins/elementor/assets/js/frontend.min.js?ver=2.9.14' id='elementor-frontend-js'></script>
 <script id='wp-util-js-extra'>
-    var _wpUtilSettings = {"ajax": {"url": "\/wordpress\/wp-admin\/admin-ajax.php"}};
+var _wpUtilSettings = {"ajax":{"url":"\/wordpress\/wp-admin\/admin-ajax.php"}};
 </script>
 <script src='css/js/wp-util.min.js?ver=5.5.1' id='wp-util-js'></script>
 <script id='wpforms-elementor-js-extra'>
-    var wpformsElementorVars = {"recaptcha_type": "v2"};
+var wpformsElementorVars = {"recaptcha_type":"v2"};
 </script>
-<script src='css/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.6.2.2'
-        id='wpforms-elementor-js'></script>
-<script>
-    /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () {
-        var t, e = location.hash.substring(1);
-        /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus())
-    }, !1);
-</script>
-</body>
+<script src='css/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.6.2.2' id='wpforms-elementor-js'></script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+		</body>
 </html>
