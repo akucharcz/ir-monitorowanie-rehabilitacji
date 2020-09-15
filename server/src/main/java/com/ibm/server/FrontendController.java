@@ -11,32 +11,16 @@ import java.util.Map;
 @Controller
 public class FrontendController {
 
-    @GetMapping("/login_register")
-    public String login() {
-        return "login";
-    }
-
-    @GetMapping("/")
-    public String main() {
-        return "main";
-    }
-
-
-/*
     @GetMapping("/")
     public String main() {
 
         return "main";
     }
-
-
     @GetMapping("/login_register.html")
     public String login() {
 
         return "login";
     }
-
- */
     @GetMapping("/patients.html")
     public String patients() {
 
