@@ -2,6 +2,7 @@ package com.ibm.server;
 import com.ibm.server.model.ChartStructure;
 import com.ibm.server.model.LoginStructure;
 import com.ibm.server.model.TrainingDataStructure;
+import com.ibm.server.service.ChartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,5 +36,11 @@ public class api {
     public TrainingDataStructure postTrainingData(@RequestBody TrainingDataStructure trainingDataStructure) {
 
         return trainingController.saveTraining(trainingDataStructure);
+    }
+
+    private final ChartService chartService;
+    @PostMapping("/chart")
+    public List<Integer> postChart(@RequestBody ChartStructure chartStructure) {
+        return chartService.getChartData(chartStructure);
     }
 }

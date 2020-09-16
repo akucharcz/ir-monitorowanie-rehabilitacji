@@ -79,24 +79,26 @@ public class LoginActivity extends Activity implements OnClickListener {
                 loginPrefsEditor.commit();
             }
         }
-        LoginStructure loginStructure = new LoginStructure(username,password);
-        ApiUtils.getAPIService().postLogin(loginStructure)
-        .enqueue(new Callback<Object>() {
-            @Override
-            public void onResponse(Call<Object> call, Response<Object> response) {
-                if(response.isSuccessful()){
-                    goToMainActivity();
-                }
-                else Toast.makeText(LoginActivity.this, "Błędny login lub hasło", Toast.LENGTH_LONG).show();
+        if (username != "") {
+            LoginStructure loginStructure = new LoginStructure(username, password);
+            ApiUtils.getAPIService().postLogin(loginStructure)
+                    .enqueue(new Callback<Object>() {
+                        @Override
+                        public void onResponse(Call<Object> call, Response<Object> response) {
+                            if (response.isSuccessful()) {
+                                goToMainActivity();
+                            } else
+                                Toast.makeText(LoginActivity.this, "Błędny login lub hasło", Toast.LENGTH_LONG).show();
 
-            }
+                        }
 
-            @Override
-            public void onFailure(Call<Object> call, Throwable t) {
-                Log.i("Error", t.getMessage());
-                Toast.makeText(LoginActivity.this, "Nie można się połączyć z serwerem", Toast.LENGTH_LONG).show();
-            }
-        });
+                        @Override
+                        public void onFailure(Call<Object> call, Throwable t) {
+                            Log.i("Error", t.getMessage());
+                            Toast.makeText(LoginActivity.this, "Nie można się połączyć z serwerem", Toast.LENGTH_LONG).show();
+                        }
+                    });
+        }
     }
 
     public void goToMainActivity() {

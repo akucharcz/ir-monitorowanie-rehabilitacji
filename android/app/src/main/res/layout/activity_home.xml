@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="40dp">
+        android:padding="30dp">
 
         <ImageView
             android:layout_width="70dp"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:padding="40dp">
+        android:padding="25dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp"
+        android:padding="15dp"
         android:orientation="horizontal" >
 
         <TextView
@@ -102,11 +102,37 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="9dp"
-            android:text="@string/start_measure"
+            android:text="Rozpocznij pomiar"
             android:textSize="20sp" />
 
         <ImageButton
-            android:id="@+id/start_measure_btn"
+            android:id="@+id/open1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/ic_arrow"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="9dp"
+            android:text="Zakończ pomiar"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/send1"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentEnd="true"
@@ -124,7 +150,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp"
+        android:padding="15dp"
         android:orientation="horizontal" >
 
         <TextView
@@ -145,6 +171,16 @@
             android:background="@drawable/ic_arrow"/>
 
     </RelativeLayout>
+    <Button
+    android:id="@+id/close1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Zakończ badanie" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
 
     <View
         android:layout_width="match_parent"

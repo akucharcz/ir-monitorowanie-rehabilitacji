@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -33,11 +34,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
-        Button openButton = (Button) findViewById(R.id.open1);
-        Button sendButton = (Button) findViewById(R.id.send1);
+        ImageButton openButton = (ImageButton) findViewById(R.id.open1);
+        ImageButton sendButton = (ImageButton) findViewById(R.id.send1);
         Button closeButton = (Button) findViewById(R.id.close1);
+        ImageButton historyButton = (ImageButton) findViewById(R.id.history_btn);
         myLabel = (TextView) findViewById(R.id.label1);
 
         openButton.setOnClickListener(v -> {
@@ -69,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
                 closeBT();
             } catch (IOException ex) {
             }
+        });
+
+        //History button
+        historyButton.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, HistoryMenuActivity.class));
+            MainActivity.this.finish();
         });
 
 

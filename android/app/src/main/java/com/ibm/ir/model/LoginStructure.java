@@ -4,8 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
 public class LoginStructure {
-    private String login;
+    private static String login;
     private String password;
+
+    public LoginStructure(String username, String password) {
+        this.login = username;
+        this.password = password;
+    }
+
+    public static String getLogin() {
+        return login;
+    }
 }

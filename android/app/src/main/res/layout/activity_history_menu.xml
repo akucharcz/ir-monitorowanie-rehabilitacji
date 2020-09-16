@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ostatnia godzina"
+        tools:layout_editor_absoluteX="56dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:text="Ostatnia doba"
+        tools:layout_editor_absoluteX="64dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="423dp"
+        android:layout_height="wrap_content"
+        android:text="Ostatni tydzień"
+        tools:layout_editor_absoluteX="64dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="400dp"
+        android:layout_height="73dp"
+        android:text="Ostatni miesiąc"
+        tools:layout_editor_absoluteX="257dp"
+        tools:layout_editor_absoluteY="608dp" />
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/chart"
+        android:layout_width="423dp"
+        android:layout_height="346dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+</LinearLayout>
