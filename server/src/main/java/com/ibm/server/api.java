@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 @RequiredArgsConstructor
@@ -33,7 +34,7 @@ public class api {
         List<User> usersList = userService.findAllUsers();
         System.out.println(usersList.size());
         for (User testowylogin : usersList) {
-            if (testowylogin.getEmail().equals(loginStructure.getEmail()) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
+            if (Objects.nonNull(testowylogin.getFullname()) && testowylogin.getFullname().equals(loginStructure.getFullname()) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
                 return  testowylogin;
             }
         }

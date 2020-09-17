@@ -1,19 +1,19 @@
 package com.ibm.ir.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 public class LoginStructure {
-    private static String login;
+    private String fullname;
     private String password;
+    private boolean isUser = true;
 
     public LoginStructure(String username, String password) {
-        this.login = username;
+        this.fullname = username;
         this.password = password;
     }
 
-    public static String getLogin() {
-        return login;
+    public String getLogin() {
+        return this.getFullname();
     }
 }

@@ -42,7 +42,7 @@ public class HistoryMenuActivity extends AppCompatActivity {
         hourButton.setOnClickListener(v -> {
             resetChart();
             period = "1";
-            ChartStructure chartStructure = new ChartStructure(LoginStructure.getLogin(), period);
+            ChartStructure chartStructure = new ChartStructure("", period);
             ApiUtils.getAPIService().postLogin(chartStructure)
                     .enqueue(new Callback<List<Integer>>() {
                         @Override
@@ -62,7 +62,7 @@ public class HistoryMenuActivity extends AppCompatActivity {
         dayButton.setOnClickListener(v -> {
             resetChart();
             period = "2";
-            ChartStructure chartStructure = new ChartStructure(LoginStructure.getLogin(), period);
+            ChartStructure chartStructure = new ChartStructure("", period);
             ApiUtils.getAPIService().postLogin(chartStructure)
                     .enqueue(new Callback<List<Integer>>() {
                         @Override
@@ -82,7 +82,7 @@ public class HistoryMenuActivity extends AppCompatActivity {
         weekButton.setOnClickListener(v -> {
             resetChart();
             period = "3";
-            ChartStructure chartStructure = new ChartStructure(LoginStructure.getLogin(), period);
+            ChartStructure chartStructure = new ChartStructure("", period);
             ApiUtils.getAPIService().postLogin(chartStructure)
                     .enqueue(new Callback<List<Integer>>() {
                         @Override
@@ -102,7 +102,7 @@ public class HistoryMenuActivity extends AppCompatActivity {
         monthButton.setOnClickListener(v -> {
             resetChart();
             period = "4";
-            ChartStructure chartStructure = new ChartStructure(LoginStructure.getLogin(), period);
+            ChartStructure chartStructure = new ChartStructure("", period);
             ApiUtils.getAPIService().postLogin(chartStructure)
                     .enqueue(new Callback<List<Integer>>() {
                         @Override
