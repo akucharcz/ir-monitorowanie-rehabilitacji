@@ -1,11 +1,18 @@
 package com.ibm.server;
 
+import com.ibm.server.domain.User;
 import com.ibm.server.model.ChartStructure;
 import com.ibm.server.service.ChartService;
+import com.ibm.server.service.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -18,16 +25,47 @@ public class FrontendController {
 
     private final ChartService chartService;
 
-    @GetMapping("/")
-    public String main() {
+    @Autowired
+    private CustomUserDetailsService userService;
 
-        return "main";
-    }
-    @GetMapping("/login_register.html")
-    public String login() {
 
-        return "login";
+    @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
+    public ModelAndView login() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("login");
+        return modelAndView;
     }
+
+    @RequestMapping(value = "/signup", method = RequestMethod.GET)
+    public ModelAndView signup() {
+        ModelAndView modelAndView = new ModelAndView();
+        User user = new User();
+        modelAndView.addObject("user", user);
+        modelAndView.setViewName("signup");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/signup", method = RequestMethod.POST)
+    public ModelAndView createNewUser(User user, BindingResult bindingResult) {
+        ModelAndView modelAndView = new ModelAndView();
+        User userExists = userService.findUserByEmail(user.getEmail());
+        if (userExists != null) {
+            bindingResult
+                    .rejectValue("email", "error.user",
+                            "There is already a user registered with the username provided");
+        }
+        if (bindingResult.hasErrors()) {
+            modelAndView.setViewName("signup");
+        } else {
+            userService.saveUser(user);
+            modelAndView.addObject("successMessage", "User has been registered successfully");
+            modelAndView.addObject("user", new User());
+            modelAndView.setViewName("login");
+
+        }
+        return modelAndView;
+    }
+
     @GetMapping("/patients.html")
     public String patients() {
 
@@ -62,7 +100,7 @@ public class FrontendController {
                 .period("4")
                 .build());
 
-    Map<String, Integer> surveyMapHours = new LinkedHashMap<>();
+        Map<String, Integer> surveyMapHours = new LinkedHashMap<>();
         Map<String, Integer> surveyMapDays = new LinkedHashMap<>();
         Map<String, Integer> surveyMapWeeks = new LinkedHashMap<>();
         Map<String, Integer> surveyMapMonths = new LinkedHashMap<>();

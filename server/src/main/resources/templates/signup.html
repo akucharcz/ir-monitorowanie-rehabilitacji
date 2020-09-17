@@ -47,6 +47,7 @@
         display:none !important;
     }
     </style><style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style media="print">#wpadminbar { display:none; }</style>
+
     <style id="wp-custom-css">
         button.tml-button{
             font-family: "Varela Round", Sans-serif;
@@ -157,8 +158,7 @@
                                                                 <div class="elementor-widget-container">
                                                                     <div class="elementor-tabs" role="tablist">
                                                                         <div class="elementor-tabs-wrapper">
-                                                                            <div id="elementor-tab-title-2571" class="elementor-tab-title elementor-tab-desktop-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-2571"><a href="">Zaloguj się</a></div>
-
+                                                                            <div id="elementor-tab-title-2571" class="elementor-tab-title elementor-tab-desktop-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-2571"><a href="">Zarejestruj się</a></div>
                                                                         </div>
                                                                         <div class="elementor-tabs-content-wrapper">
                                                                             <div class="elementor-tab-title elementor-tab-mobile-title" data-tab="1" role="tab">Zaloguj się</div>
@@ -176,28 +176,27 @@
                                                                                                                         <div class="elementor-shortcode"><div class="tml tml-login">
 
                                                                                                                             <div layout:fragment="content">
-                                                                                                                                <form th:action="@{/login}" method="post">
+                                                                                                                                <form class="form-signin" th:action="@{/signup}" method="post">
                                                                                                                                     <div class="tml-alerts">
-                                                                                                                                    <div th:if="${param.error}">
-                                                                                                                                        Niepoprawny adres email lub hasło.
+                                                                                                                                        <div th:if="${param.error}">
+                                                                                                                                            Niepoprawny email lub hasło.
+                                                                                                                                        </div>
+                                                                                                                                        <div th:if="${param.logout}">
+                                                                                                                                            Zostałeś wylogowany.
+                                                                                                                                        </div>
                                                                                                                                     </div>
-                                                                                                                                    <div th:if="${param.logout}">
-                                                                                                                                        Zostałeś wylogowany.
-                                                                                                                                    </div>
-                                                                                                                                    </div>
-                                                                                                                                    <label for="inputEmail" class="tml-label">Adres email</label>
+                                                                                                                                    <label for="inputUsername" class="tml-label">Email</label>
                                                                                                                                     <input type="email" name="email" id="inputEmail" class="tml-field" placeholder="Email" required="" />
                                                                                                                                     <label for="inputPassword" class="tml-label">Hasło</label>
-                                                                                                                                    <input type="password" name="password" id="inputPassword" class="tml-field" placeholder="Hasło" required="" /><br><br>
-                                                                                                                                    <button class="tml-button color-button" type="submit">Zaloguj się</button><br>
-
-                                                                                                                                    <label class="tml-label">Nie masz konta?</label>
+                                                                                                                                    <input type="password" name="password" id="inputPassword" class="tml-field" placeholder="Hasło" required="" />
+                                                                                                                                    <label for="inputFullname" class="tml-label">Nazwa użytkownika</label>
+                                                                                                                                    <input type="text" name="fullname" id="inputEmail" class="tml-field" placeholder="Nazwa użytkownika" required="" /><br><br>
+                                                                                                                                    <button class="tml-button" type="submit">Zarejestruj się</button>
                                                                                                                                 </form>
-
-                                                                                                                                    <form class="form-signin" th:action="@{/signup}" method="get">
-                                                                                                                                        <button class="tml-button" type="Submit">Zarejestruj się</button>
-                                                                                                                                    </form>
-
+                                                                                                                                <label class="tml-label">Masz już konto?</label>
+                                                                                                                                <form class="form-signin" th:action="@{/login}" method="get">
+                                                                                                                                    <button class="tml-button" type="Submit">Zaloguj się</button>
+                                                                                                                                </form>
                                                                                                                             </div>
 
 
@@ -226,8 +225,66 @@
                                                                                 </div>
                                                                             </div>
                                                                                 </p></div>
+                                                                            <div class="elementor-tab-title elementor-tab-mobile-title" data-tab="2" role="tab">Zarejestruj się</div>
+                                                                            <div id="elementor-tab-content-2572" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-2572"><p>		<div data-elementor-type="section" data-elementor-id="18" class="elementor elementor-18" data-elementor-settings="[]">
+                                                                                <div class="elementor-inner">
+                                                                                    <div class="elementor-section-wrap">
+                                                                                        <section class="elementor-element elementor-element-ceba224 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ceba224" data-element_type="section">
+                                                                                            <div class="elementor-container elementor-column-gap-default">
+                                                                                                <div class="elementor-row">
+                                                                                                    <div class="elementor-element elementor-element-6c25374 elementor-column elementor-col-100 elementor-top-column" data-id="6c25374" data-element_type="column">
+                                                                                                        <div class="elementor-column-wrap  elementor-element-populated">
+                                                                                                            <div class="elementor-widget-wrap">
+                                                                                                                <div class="elementor-element elementor-element-96da226 wpac-custom-form elementor-widget elementor-widget-shortcode" data-id="96da226" data-element_type="widget" data-widget_type="shortcode.default">
+                                                                                                                    <div class="elementor-widget-container">
+                                                                                                                        <div class="elementor-shortcode"><div id="erf_form_container_231" class="erf-container erf-label-top erf-layout-one-column erf-style-rounded-corner  ">
+                                                                                                                            <div class="erf-reg-form-container" style="">
 
+                                                                                                                                <div class="erf_front_administration">
+                                                                                                                                    <div class="erf_form_layout_admin_dialog" style="display: none;" title="Change Form Layout">
+                                                                                                                                        <form method="post">
+                                                                                                                                            <div class="erf-row">
+                                                                                                                                                <div class="erf-control-label">
+                                                                                                                                                    <label>Layout</label>
+                                                                                                                                                </div>
+                                                                                                                                                <div class="erf-control">
+                                                                                                                                                    <select name="layout">
+                                                                                                                                                        <option selected value="one-column">One Column</option>
+                                                                                                                                                        <option  value="two-column">Two Column</option>
+                                                                                                                                                    </select>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
 
+                                                                                                                                            <div class="erf-row">
+                                                                                                                                                <div class="erf-control-label">
+                                                                                                                                                    <label>Label Position</label>
+                                                                                                                                                </div>
+                                                                                                                                                <div class="erf-control">
+                                                                                                                                                    <select name="label_position">
+                                                                                                                                                        <option selected value="top">Top</option>
+                                                                                                                                                        <option  value="inline">Inline</option>
+                                                                                                                                                        <option  value="no-label">No Label</option>
+                                                                                                                                                    </select>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                            <input type="hidden" name="action" value="erf_change_form_layout"/>
+                                                                                                                                            <input type="hidden" name="erform_id" value="231"/>
+                                                                                                                                            <input type="hidden" name="change_form_layout_nonce" value="c9dc5a1360"/>
+                                                                                                                                        </form>
+
+                                                                                                                                    </div>
+                                                                                                                                </div>
+
+                                                                                                                            </div></div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                        </section>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                                 </p></div>
