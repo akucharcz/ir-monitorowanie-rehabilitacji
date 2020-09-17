@@ -1,12 +1,11 @@
 package com.ibm.server;
 
-import com.ibm.server.domain.Role;
+import com.ibm.server.model.Role;
 import com.ibm.server.repository.RoleRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

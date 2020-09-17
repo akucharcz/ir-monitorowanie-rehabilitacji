@@ -1,11 +1,11 @@
 package com.ibm.server.service;
 
-import com.ibm.server.domain.Role;
-import com.ibm.server.domain.User;
+import com.ibm.server.model.Role;
+import com.ibm.server.model.User;
 import com.ibm.server.repository.RoleRepository;
 import com.ibm.server.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,16 +15,15 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
-
     @Autowired
     private RoleRepository roleRepository;
-
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
@@ -32,12 +31,12 @@ public class CustomUserDetailsService implements UserDetailsService {
         return userRepository.findByEmail(email);
     }
 
-    public void saveUser(User user) {
+    public User saveUser(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setEnabled(true);
         Role userRole = roleRepository.findByRole("ADMIN");
         user.setRoles(new HashSet<>(Arrays.asList(userRole)));
-        userRepository.save(user);
+       return userRepository.save(user);
     }
 
     @Override
@@ -66,5 +65,15 @@ public class CustomUserDetailsService implements UserDetailsService {
         return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), authorities);
     }
 
+    public List<User> findAllPatients() {
 
+        return userRepository.findAll()
+                .stream()
+                .filter(User::isPatient)
+                .collect(Collectors.toList());
+    }
+
+    public List<User> findAllUsers() {
+        return userRepository.findAll();
+    }
 }

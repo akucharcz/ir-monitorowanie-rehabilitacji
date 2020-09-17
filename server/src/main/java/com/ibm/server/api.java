@@ -1,36 +1,44 @@
 package com.ibm.server;
 import com.ibm.server.model.ChartStructure;
-import com.ibm.server.model.LoginStructure;
 import com.ibm.server.model.TrainingDataStructure;
+import com.ibm.server.model.User;
 import com.ibm.server.service.ChartService;
+import com.ibm.server.service.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
-
-import static java.util.concurrent.TimeUnit.*;
 
 @RestController
 @RequiredArgsConstructor
 public class api {
 
-    private final LoginController loginController;
+    private final CustomUserDetailsService userService;
+    private final TrainingController trainingController;
 
     @PostMapping("/login")
-    public LoginStructure patientLogin(@RequestBody LoginStructure loginStructure) {
-        List<LoginStructure> usersList = loginController.getAllLogins();
+    public User patientLogin(@RequestBody User loginStructure) {
+        List<User> usersList = userService.findAllUsers();
         System.out.println(usersList.size());
-        for (LoginStructure testowylogin : usersList) {
-            if (testowylogin.getLogin().equals(loginStructure.getLogin()) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
+        for (User testowylogin : usersList) {
+            if (testowylogin.getEmail().equals(loginStructure.getEmail()) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
                 return  testowylogin;
             }
         }
-       return loginController.saveLogin(loginStructure);
+       return userService.saveUser(loginStructure);
     }
-    private final TrainingController trainingController;
+
+    @PostMapping("/registerUser")
+    public User patientRegister(@RequestBody User loginStructure) {
+        List<User> usersList = userService.findAllUsers();
+        System.out.println(usersList.size());
+        for (User testowylogin : usersList) {
+            if (testowylogin.getEmail().equals(loginStructure.getEmail()) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
+                return  testowylogin;
+            }
+        }
+        return userService.saveUser(loginStructure);
+    }
 
     @PostMapping("/training")
     public TrainingDataStructure postTrainingData(@RequestBody TrainingDataStructure trainingDataStructure) {
