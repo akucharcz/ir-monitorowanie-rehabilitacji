@@ -1,58 +1,29 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="ISO-8859-1" />
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <title>UserList</title>
 
 </head>
 <body>
-<div class="container">
-    <h2 align="center">Pomiary EMG</h2>
-    <div id="container"
-         style="width: 550px; height: 400px; margin: 0 auto"></div>
-</div>
-<script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://code.highcharts.com/highcharts.js"></script>
+<h2>User List</h2>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Second name</th>
+        <th>status</th>
+    </tr>
 
-<script th:inline="javascript">
-    $(function(){
-    Highcharts.chart('container', {
-        chart: {
-            type: 'areaspline'
-        },
-        title: {
-            text: 'Dzień'
-        },
 
-        xAxis: {
-            categories: [[${surveyMap.keySet()}]],
-            crosshair: true
-        },
-        yAxis: {
-            min: 0,
-            max:100,
-            title: {
-                text: 'Wartości EMG'
-            }
-        },
-        plotOptions: {
-            column: {
-                pointPadding: 0.2,
-                borderWidth: 0
-            }
-        },
-        series: [{
-            name: 'EMG',
-            data: [[${surveyMap.values()}]]
-        }]
-    });
-    });
-</script>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.login}"></td>
+        <td th:text="${user.password}"></td>
+        <td th:text="${user.user_type}"> </td>
 
+    </tr>
+
+</table>
 </body>
 </html>

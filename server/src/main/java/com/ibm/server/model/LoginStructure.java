@@ -21,5 +21,5 @@ public class LoginStructure {
     private String id = null;
     private String login;
     private String password;
-    private boolean user_type; // false for patient, true for doctor
+    public boolean isPatient; // false for patient, true for doctor
 }

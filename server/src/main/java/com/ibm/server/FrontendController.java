@@ -4,6 +4,7 @@ import com.ibm.server.domain.User;
 import com.ibm.server.model.ChartStructure;
 import com.ibm.server.service.ChartService;
 import com.ibm.server.service.CustomUserDetailsService;
+import com.ibm.server.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -17,17 +18,17 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
+import com.ibm.server.model.LoginStructure;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Controller
 @RequiredArgsConstructor
 public class FrontendController {
 
+    private final UserService userService;
     private final ChartService chartService;
-
-    @Autowired
-    private CustomUserDetailsService userService;
-
 
     @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
     public ModelAndView login() {
@@ -67,7 +68,12 @@ public class FrontendController {
     }
 
     @GetMapping("/patients.html")
-    public String patients() {
+    public  String patients(Model model) {
+
+        List<LoginStructure> users = userService.findAll();
+        System.out.print("users: "+users);
+
+        model.addAttribute("users", users);
 
         return "patients";
     }
