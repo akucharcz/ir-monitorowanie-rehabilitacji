@@ -3,10 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 		<title>physiotherapy app</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel='dns-prefetch' href='//www.gstatic.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="physiotherapy app &raquo; Feed" href="http://127.0.0.1/wordpress" />
@@ -109,69 +105,6 @@ body{
 	background-size: cover;
 }
 </style>
-<script type="text/javascript">
-		$(document).ready(function(){
-
-			$( "#form1" ).submit(function(event) {
-				event.preventDefault();
-
-				$.ajax({
-					type: 'POST',
-					url: '/',
-					data: $('#form1').serialize(),
-					dataType: "json",
-					success: function(response){
-						//alert("a");
-						//console.log(response.Success);
-						$('#form1')[0].reset();
-
-						document.getElementById("check").innerHTML=response.Success;
-         					//ADD THIS CODE
-         					setTimeout(function(){
-         						document.getElementById("check").innerHTML="";
-         					},3000);
-         					if (response.Success=="You are regestered,You can login now.") {
-         						document.getElementById("aa").click();
-         					};
-         				},
-         				error: function() {
-         				}
-         			})
-			});
-		});
-</script>
-<script type="text/javascript">
-		$(document).ready(function(){
-
-			$( "#form" ).submit(function(event) {
-				event.preventDefault();
-
-				$.ajax({
-					type: 'POST',
-					url: '/login',
-					data: $('#form').serialize(),
-					dataType: "json",
-					success: function(response){
-						//alert("a");
-						//console.log(response.Success);
-						$('#form')[0].reset();
-
-						document.getElementById("check").innerHTML=response.Success;
-         					//ADD THIS CODE
-         					setTimeout(function(){
-         						document.getElementById("check").innerHTML="";
-         					},3000);
-         					if (response.Success=="Success!") {
-         						document.getElementById("aa").click();
-         					};
-         				},
-         				error: function() {
-         				}
-         			})
-			});
-
-		});
-	</script>
 <body class="home page-template page-template-elementor_canvas page page-id-5 page-parent logged-in admin-bar no-customize-support wp-embed-responsive ehf-template-twentynineteen ehf-stylesheet-twentynineteen singular image-filters-enabled elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-5">
 		
 				<div data-elementor-type="wp-page" data-elementor-id="5" class="elementor elementor-5" data-elementor-settings="[]">
@@ -240,17 +173,15 @@ body{
 				<div class="elementor-element elementor-element-3cf705c wpac-custom-form elementor-widget elementor-widget-shortcode" data-id="3cf705c" data-element_type="widget" data-widget_type="shortcode.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-shortcode"><div class="tml tml-login">
-<div class="tml-alerts"></div>
-
-<form id="form" method="post" >
+<div class="tml-alerts"></div><form name="login" action="physiotherapy-app/?action=login" method="post">
 <div class="tml-field-wrap tml-log-wrap">
 <label class="tml-label" for="user_login">Nazwa użytkownika lub adres email</label>
-<input type="text" name="email" placeholder="E-mail" id="user_login" autocapitalize="off" class="tml-field">
+<input name="log" type="text" value="" id="user_login" autocapitalize="off" class="tml-field">
 </div>
 
 <div class="tml-field-wrap tml-pwd-wrap">
 <label class="tml-label" for="user_pass">Hasło</label>
-<input type="password" name="password" type="password" value="" id="user_pass" class="tml-field">
+<input name="pwd" type="password" value="" id="user_pass" class="tml-field">
 </div>
 
 <div class="tml-field-wrap tml-submit-wrap">
@@ -258,14 +189,6 @@ body{
 </div>
 
 </form>
-<div class="mssg bg-danger">
-			<span id="check" ></span>
-		</div>
-		<div id="LangTable"><a href="/profile" id="aa"></a>
-		</div>
-		<div><span>Zapomniałeś hasła?</span><a href="/forgetpass">kliknij tutaj</a>
-</div>
-
 </div>
 				</div>
 				</div>
@@ -277,7 +200,7 @@ body{
 
 		</div>
 		</div>
-								<div class="elementor-tab-title elementor-tab-mobile-title" data-tab="2" role="tab">Zarejestruj się</div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" data-tab="2" role="tab">Zarejestruj się</div>
 					<div id="elementor-tab-content-2572" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-2572"><p>		<div data-elementor-type="section" data-elementor-id="18" class="elementor elementor-18" data-elementor-settings="[]">
 			<div class="elementor-inner">
 				<div class="elementor-section-wrap">
