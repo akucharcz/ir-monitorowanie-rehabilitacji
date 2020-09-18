@@ -171,20 +171,19 @@
             android:background="@drawable/ic_arrow"/>
 
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
     <Button
-    android:id="@+id/close1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Zakończ badanie" />
-
-    <View
+        android:id="@+id/close1"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray"/>
+        android:layout_height="wrap_content"
+        android:text="Zakończ badanie"
+        android:layout_marginTop="20dp">
+    </Button>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray"/>
 
 </LinearLayout>

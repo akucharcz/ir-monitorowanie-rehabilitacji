@@ -7,40 +7,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wybierz okres pomiaru :"
+        android:gravity="center"
+        android:padding="20dp"
+        android:textSize="20sp"/>
+
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ostatnia godzina"
-        tools:layout_editor_absoluteX="56dp" />
+        android:padding="20dp"/>
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
-        android:layout_height="82dp"
+        android:layout_height="wrap_content"
         android:text="Ostatnia doba"
-        tools:layout_editor_absoluteX="64dp" />
+        android:padding="20dp" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="423dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ostatni tydzień"
-        tools:layout_editor_absoluteX="64dp" />
+        android:padding="20dp" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="400dp"
-        android:layout_height="73dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Ostatni miesiąc"
-        tools:layout_editor_absoluteX="257dp"
-        tools:layout_editor_absoluteY="608dp" />
+        android:padding="20dp" />
 
     <lecho.lib.hellocharts.view.LineChartView
         android:id="@+id/chart"
-        android:layout_width="423dp"
-        android:layout_height="346dp"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="396dp" />
+        android:layout_width="match_parent"
+        android:layout_height="346dp" />
 
 </LinearLayout>
