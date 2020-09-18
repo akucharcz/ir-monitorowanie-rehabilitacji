@@ -135,4 +135,9 @@ public class FrontendController {
 
         return "exercises";
     }
+    @GetMapping("/dashboard.html")
+    public String dashboard() {
+
+        return "dashboard";
+    }
 }
