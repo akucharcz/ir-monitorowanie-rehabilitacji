@@ -6,7 +6,7 @@ import lombok.Data;
 public class LoginStructure {
     private String fullname;
     private String password;
-    private boolean isUser = true;
+    private boolean patient = true;
 
     public LoginStructure(String username, String password) {
         this.fullname = username;
