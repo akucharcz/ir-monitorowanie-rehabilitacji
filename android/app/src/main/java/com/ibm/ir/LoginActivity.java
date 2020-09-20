@@ -1,11 +1,9 @@
 package com.ibm.ir;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,26 +16,20 @@ import android.widget.Toast;
 
 import com.ibm.ir.model.LoginStructure;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends Activity implements OnClickListener {
 
-    private String username, password;
+    private String password;
     private Button ok;
     private EditText editTextUsername, editTextPassword;
     private CheckBox saveLoginCheckBox;
     private SharedPreferences loginPreferences;
     private SharedPreferences.Editor loginPrefsEditor;
     private Boolean saveLogin;
+    public static String username;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,6 +60,10 @@ public class LoginActivity extends Activity implements OnClickListener {
 
             username = editTextUsername.getText().toString();
             password = editTextPassword.getText().toString();
+
+            if(username.contains(" ")) {
+                username.concat(" ");
+            }
 
             if (saveLoginCheckBox.isChecked()) {
                 loginPrefsEditor.putBoolean("saveLogin", true);

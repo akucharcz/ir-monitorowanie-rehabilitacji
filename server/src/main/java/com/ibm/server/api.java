@@ -1,12 +1,16 @@
 package com.ibm.server;
 import com.ibm.server.model.ChartStructure;
+import com.ibm.server.model.ResultStructure;
 import com.ibm.server.model.TrainingDataStructure;
 import com.ibm.server.model.User;
 import com.ibm.server.service.ChartService;
 import com.ibm.server.service.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
+import org.apache.tomcat.jni.Local;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +19,6 @@ import java.util.Objects;
 public class api {
 
     private final CustomUserDetailsService userService;
-    private final TrainingController trainingController;
 
     @PostMapping("/login")
     public User patientLogin(@RequestBody User loginStructure) {
@@ -29,12 +32,40 @@ public class api {
        return userService.saveUser(loginStructure);
     }
 
+    private final TrainingController trainingController;
+
+    @PostMapping("/lastResult")
+    public ResultStructure postResult(@RequestBody String username) {
+        username = username.substring(1, username.length()-1);
+        LocalDateTime result = null;
+        List<TrainingDataStructure> trainings = trainingController.getAllTrainings();
+        LocalDateTime now_date = LocalDateTime.now();
+        long minDuration = Duration.between(trainings.get(0).getStart(), now_date).toHours();
+        long duration;
+        for (TrainingDataStructure tr : trainings) {
+            duration = Duration.between(tr.getStart(), now_date).toHours();
+            if (tr.getLogin().equals(username)) {
+                if (minDuration > duration || minDuration == duration) {
+                    minDuration = duration;
+                    result = tr.getStart();
+                }
+            }
+        }
+        String lastDate = result.toString();
+        System.out.println(lastDate);
+        ResultStructure rs = new ResultStructure();
+        rs.setLastResultDate(result);
+        return rs;
+    }
+
     @PostMapping("/registerUser")
     public User patientRegister(@RequestBody User loginStructure) {
+        String username = loginStructure.getFullname();
+        username = loginStructure.getFullname().substring(1, loginStructure.getFullname().length()-1);
         List<User> usersList = userService.findAllUsers();
         System.out.println(usersList.size());
         for (User testowylogin : usersList) {
-            if (Objects.nonNull(testowylogin.getFullname()) && testowylogin.getFullname().equals(loginStructure.getFullname()) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
+            if (Objects.nonNull(username) && testowylogin.getFullname().equals(username) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
                 return  testowylogin;
             }
         }
@@ -52,4 +83,5 @@ public class api {
     public List<Integer> postChart(@RequestBody ChartStructure chartStructure) {
         return chartService.getChartData(chartStructure);
     }
+
 }
