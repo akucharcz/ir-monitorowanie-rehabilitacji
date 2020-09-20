@@ -3,15 +3,12 @@ package com.ibm.ir;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.ibm.ir.model.ChartStructure;
-import com.ibm.ir.model.LoginStructure;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import retrofit2.Call;
@@ -19,7 +16,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import lecho.lib.hellocharts.model.Axis;
-import lecho.lib.hellocharts.model.AxisValue;
 import lecho.lib.hellocharts.model.Line;
 import lecho.lib.hellocharts.model.LineChartData;
 import lecho.lib.hellocharts.model.PointValue;
@@ -42,7 +38,7 @@ public class HistoryMenuActivity extends AppCompatActivity {
             resetChart();
             period = "1";
             ChartStructure chartStructure = new ChartStructure(LoginActivity.username, period);
-            ApiUtils.getAPIService().postLogin(chartStructure)
+            ApiUtils.getAPIService().getLastResult(chartStructure)
                     .enqueue(new Callback<List<Integer>>() {
                         @Override
                         public void onResponse(Call<List<Integer>> call, Response<List<Integer>> response) {
@@ -62,7 +58,7 @@ public class HistoryMenuActivity extends AppCompatActivity {
             resetChart();
             period = "2";
             ChartStructure chartStructure = new ChartStructure(LoginActivity.username, period);
-            ApiUtils.getAPIService().postLogin(chartStructure)
+            ApiUtils.getAPIService().getLastResult(chartStructure)
                     .enqueue(new Callback<List<Integer>>() {
                         @Override
                         public void onResponse(Call<List<Integer>> call, Response<List<Integer>> response) {
@@ -82,7 +78,7 @@ public class HistoryMenuActivity extends AppCompatActivity {
             resetChart();
             period = "3";
             ChartStructure chartStructure = new ChartStructure(LoginActivity.username, period);
-            ApiUtils.getAPIService().postLogin(chartStructure)
+            ApiUtils.getAPIService().getLastResult(chartStructure)
                     .enqueue(new Callback<List<Integer>>() {
                         @Override
                         public void onResponse(Call<List<Integer>> call, Response<List<Integer>> response) {
@@ -102,7 +98,7 @@ public class HistoryMenuActivity extends AppCompatActivity {
             resetChart();
             period = "4";
             ChartStructure chartStructure = new ChartStructure(LoginActivity.username, period);
-            ApiUtils.getAPIService().postLogin(chartStructure)
+            ApiUtils.getAPIService().getLastResult(chartStructure)
                     .enqueue(new Callback<List<Integer>>() {
                         @Override
                         public void onResponse(Call<List<Integer>> call, Response<List<Integer>> response) {

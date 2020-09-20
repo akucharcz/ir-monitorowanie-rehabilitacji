@@ -41,8 +41,10 @@
 
         <EditText
             android:id="@+id/name_login"
+            android:inputType="text"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
             android:textColor="@color/colorAccent"/>
 
     </LinearLayout>
@@ -65,8 +67,10 @@
 
         <EditText
             android:id="@+id/surname_login"
+            android:inputType="text"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
             android:textColor="@color/colorAccent"/>
 
     </LinearLayout>

@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -12,20 +13,14 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.internal.LinkedTreeMap;
-import com.ibm.ir.model.ChartStructure;
-import com.ibm.ir.model.LoginStructure;
-import com.ibm.ir.model.ResultStructure;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
-
-import javax.xml.transform.Result;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -37,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     TextView myLabel;
     TextView measurementDate;
     TextView fullname;
+    TextView sendButtonText;
     BluetoothAdapter mBluetoothAdapter;
     BluetoothSocket mmSocket;
     BluetoothDevice mmDevice;
@@ -52,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         String username = LoginActivity.username;
-        ImageButton openButton = (ImageButton) findViewById(R.id.open1);
+        sendButtonText = (TextView) findViewById(R.id.sendButtonText);
         ImageButton sendButton = (ImageButton) findViewById(R.id.send1);
         Button closeButton = (Button) findViewById(R.id.close1);
         ImageButton historyButton = (ImageButton) findViewById(R.id.history_btn);
@@ -61,7 +57,18 @@ public class MainActivity extends AppCompatActivity {
         myLabel = (TextView) findViewById(R.id.label1);
         fullname.setText(username);
         Log.e("TAG1", username);
-        ApiUtils.getAPIService().postLogin(username)
+        try {
+            if(!Build.PRODUCT.matches(".*_?sdk_?.*")){
+                findBT();
+                openBT();
+                Toast.makeText(MainActivity.this, "Bluetooth connected", Toast.LENGTH_LONG).show();
+            }
+           else{
+                Toast.makeText(MainActivity.this, "Bluetooth not connected. Running on emulator", Toast.LENGTH_LONG).show();
+            }
+        } catch (IOException ex) {
+        }
+        ApiUtils.getAPIService().getLastResult(username)
                 .enqueue(new Callback<Object>() {
                     @Override
                     public void onResponse(Call<Object> call, Response<Object> response) {
@@ -74,21 +81,28 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
-        openButton.setOnClickListener(v -> {
-            try {
-                findBT();
-                openBT();
-            } catch (IOException ex) {
-            }
-        });
         //Send Button
         sendButton.setOnClickListener(v -> {
             if (!isReckordindData) {
+                dataSubscriber = new DataSubscriber();
+                sendButtonText.setText("Zakończ pomiar");
                 subscription = bluetoothDataReceiver.dataStream(mmInputStream, dataSubscriber);
                 isReckordindData = true;
             } else {
+                sendButtonText.setText("Rozpocznij nowy pomiar");
                 new Handler().post(() -> {
-                    myLabel.setText(dataSubscriber.returnData().toString());
+                    myLabel.setText(dataSubscriber.returnData().getEmgData().toString());
+                    ApiUtils.getAPIService().postTrainingResults(dataSubscriber.returnData())
+                            .enqueue(new Callback<Object>() {
+                                @Override
+                                public void onResponse(Call<Object> call, Response<Object> response) {
+                                    Toast.makeText(MainActivity.this, "Data succesfully uploaded", Toast.LENGTH_LONG).show();
+                                }
+                                @Override
+                                public void onFailure(Call<Object> call, Throwable t) {
+                                    Toast.makeText(MainActivity.this, "Error while uploading training data", Toast.LENGTH_LONG).show();
+                                }
+                            });
                     dataSubscriber.resetModel();
                 });
                 dataSubscriber.setEndDate();
@@ -118,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         LinkedTreeMap rs = (LinkedTreeMap) body;
         String lastResultDate = (String) rs.get("lastResultDate");
         lastResultDate = lastResultDate.replace("T", " ");
-        lastResultDate = lastResultDate.substring(0, lastResultDate.length()-4);
+        lastResultDate = lastResultDate.substring(0, lastResultDate.length() - 4);
         measurementDate.setText(lastResultDate);
     }
 
