@@ -3,6 +3,7 @@ package com.ibm.server.model;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;

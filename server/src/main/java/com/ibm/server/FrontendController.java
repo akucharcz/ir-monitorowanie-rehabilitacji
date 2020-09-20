@@ -2,6 +2,7 @@ package com.ibm.server;
 
 import com.ibm.server.model.User;
 import com.ibm.server.model.ChartStructure;
+import com.ibm.server.repository.UserRepository;
 import com.ibm.server.service.ChartService;
 import com.ibm.server.service.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,7 @@ public class FrontendController {
 
     private final CustomUserDetailsService userService;
     private final ChartService chartService;
+    private final UserRepository userRepository;
 
     @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
     public ModelAndView login() {
@@ -80,25 +82,26 @@ public class FrontendController {
         AtomicInteger inte3 = new AtomicInteger(1);
         AtomicInteger inte4 = new AtomicInteger(1);
 
-
+        User user= new User();
+        user = userService.findUserByEmail(user.getFullname());
 
         var hoursData = chartService.getChartData(ChartStructure.builder()
-                .login("TestUser")
+                .login(user.getFullname())
                 .period("1")
                 .build());
 
         var daysData = chartService.getChartData(ChartStructure.builder()
-                .login("TestUser")
+                .login(user.getFullname())
                 .period("2")
                 .build());
 
         var weeksData = chartService.getChartData(ChartStructure.builder()
-                .login("TestUser")
+                .login(user.getFullname())
                 .period("3")
                 .build());
 
         var monthsData = chartService.getChartData(ChartStructure.builder()
-                .login("TestUser")
+                .login(user.getFullname())
                 .period("4")
                 .build());
 

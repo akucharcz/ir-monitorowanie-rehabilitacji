@@ -21,5 +21,5 @@ public class User {
     private boolean enabled;
     @DBRef
     private Set<Role> roles;
-    private boolean isPatient;//true for aptient, false for doctor
+    private boolean isPatient;//true for patient, false for doctor
 }
