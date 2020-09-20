@@ -61,7 +61,6 @@ public class api {
     @PostMapping("/registerUser")
     public User patientRegister(@RequestBody User loginStructure) {
         String username = loginStructure.getFullname();
-        username = loginStructure.getFullname().substring(1, loginStructure.getFullname().length()-1);
         List<User> usersList = userService.findAllUsers();
         System.out.println(usersList.size());
         for (User testowylogin : usersList) {
