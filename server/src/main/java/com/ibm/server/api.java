@@ -1,4 +1,5 @@
 package com.ibm.server;
+
 import com.ibm.server.model.ChartStructure;
 import com.ibm.server.model.ResultStructure;
 import com.ibm.server.model.TrainingDataStructure;
@@ -6,8 +7,9 @@ import com.ibm.server.model.User;
 import com.ibm.server.service.ChartService;
 import com.ibm.server.service.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
-import org.apache.tomcat.jni.Local;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -26,17 +28,17 @@ public class api {
         System.out.println(usersList.size());
         for (User testowylogin : usersList) {
             if (testowylogin.getEmail().equals(loginStructure.getEmail()) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
-                return  testowylogin;
+                return testowylogin;
             }
         }
-       return userService.saveUser(loginStructure);
+        return userService.saveUser(loginStructure);
     }
 
     private final TrainingController trainingController;
 
     @PostMapping("/lastResult")
     public ResultStructure postResult(@RequestBody String username) {
-        username = username.substring(1, username.length()-1);
+        username = username.substring(1, username.length() - 1);
         LocalDateTime result = null;
         List<TrainingDataStructure> trainings = trainingController.getAllTrainings();
         LocalDateTime now_date = LocalDateTime.now();
@@ -65,7 +67,7 @@ public class api {
         System.out.println(usersList.size());
         for (User testowylogin : usersList) {
             if (Objects.nonNull(testowylogin.getFullname()) && testowylogin.getFullname().equals(username) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
-                return  testowylogin;
+                return testowylogin;
             }
         }
         return userService.saveUser(loginStructure);
@@ -78,6 +80,7 @@ public class api {
     }
 
     private final ChartService chartService;
+
     @PostMapping("/chart")
     public List<Integer> postChart(@RequestBody ChartStructure chartStructure) {
         return chartService.getChartData(chartStructure);
