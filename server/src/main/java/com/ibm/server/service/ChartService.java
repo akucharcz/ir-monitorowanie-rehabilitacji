@@ -30,7 +30,7 @@ public class ChartService {
             LocalDateTime start_date = tr.getStart();
             LocalDateTime now_date = LocalDateTime.now();
             long duration = Duration.between(start_date,now_date).toHours();
-            if (period.contains("1")) { // ostatnia godzina
+            if (period.contains("1") && tr.getLogin().equals(chartStructure.getLogin())) { // ostatnia godzina
                 long MAX_DURATION = HOURS.convert(1, HOURS);
                 if (duration > MAX_DURATION) {
                     continue;
@@ -38,7 +38,7 @@ public class ChartService {
                     System.out.println("TAK1");
                     chart_data.addAll(tr.getEmgData());
                 }
-            } else if (period.contains("2")) { // OSTATNIA DOBA
+            } else if (period.contains("2") && tr.getLogin().equals(chartStructure.getLogin())) { // OSTATNIA DOBA
                 long MAX_DURATION = HOURS.convert(24, HOURS);
                 if (duration > MAX_DURATION) {
                     continue;
@@ -46,7 +46,7 @@ public class ChartService {
                     System.out.println("TAK2");
                     chart_data.addAll(tr.getEmgData());
                 }
-            } else if (period.contains("3")) { //OSTATNI TYDZIEN
+            } else if (period.contains("3") && tr.getLogin().equals(chartStructure.getLogin())) { //OSTATNI TYDZIEN
                 long MAX_DURATION = HOURS.convert(7, DAYS);
                 if (duration > MAX_DURATION) {
                     continue;
@@ -54,7 +54,7 @@ public class ChartService {
                     System.out.println("TAK3");
                     chart_data.addAll(tr.getEmgData());
                 }
-            } else if (period.contains("4")) { //OSTATNI MIESIAC
+            } else if (period.contains("4") && tr.getLogin().equals(chartStructure.getLogin())) { //OSTATNI MIESIAC
                 long MAX_DURATION = HOURS.convert(30, DAYS);
                 if (duration > MAX_DURATION) {
                     continue;

@@ -8,12 +8,12 @@ public class LoginStructure {
     private String password;
     private boolean patient = true;
 
-    public LoginStructure(String username, String password) {
-        this.fullname = username;
+    public LoginStructure(String fullname, String password) {
+        this.fullname = fullname;
         this.password = password;
     }
 
     public String getLogin() {
-        return this.getFullname();
+        return getFullname();
     }
 }
