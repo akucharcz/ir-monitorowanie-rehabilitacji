@@ -61,11 +61,10 @@ public class api {
     @PostMapping("/registerUser")
     public User patientRegister(@RequestBody User loginStructure) {
         String username = loginStructure.getFullname();
-        username = loginStructure.getFullname().substring(1, loginStructure.getFullname().length()-1);
         List<User> usersList = userService.findAllUsers();
         System.out.println(usersList.size());
         for (User testowylogin : usersList) {
-            if (Objects.nonNull(username) && testowylogin.getFullname().equals(username) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
+            if (Objects.nonNull(testowylogin.getFullname()) && testowylogin.getFullname().equals(username) && testowylogin.getPassword().equals(loginStructure.getPassword())) {
                 return  testowylogin;
             }
         }

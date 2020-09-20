@@ -11,13 +11,11 @@ import java.util.Set;
 @Document(collection = "user")
 @Data
 public class User {
-
     @Id
-    private String id;
+    private String fullname;
     @Indexed(unique = true, direction = IndexDirection.DESCENDING, dropDups = true)
     private String email;
     private String password;
-    private String fullname;
     private boolean enabled;
     @DBRef
     private Set<Role> roles;

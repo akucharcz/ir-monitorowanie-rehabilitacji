@@ -46,7 +46,7 @@ public class LoginActivity extends Activity implements OnClickListener {
         loginPrefsEditor = loginPreferences.edit();
 
         saveLogin = loginPreferences.getBoolean("saveLogin", false);
-        if (saveLogin == true) {
+        if (saveLogin) {
             editTextUsername.setText(loginPreferences.getString("username", ""));
             editTextPassword.setText(loginPreferences.getString("password", ""));
             saveLoginCheckBox.setChecked(true);
@@ -77,7 +77,7 @@ public class LoginActivity extends Activity implements OnClickListener {
         }
         if (username != "") {
             LoginStructure loginStructure = new LoginStructure(username, password);
-            ApiUtils.getAPIService().postLogin(loginStructure)
+            ApiUtils.getAPIService().getLastResult(loginStructure)
                     .enqueue(new Callback<Object>() {
                         @Override
                         public void onResponse(Call<Object> call, Response<Object> response) {

@@ -16,15 +16,8 @@ public class DataSubscriber extends Subscriber<Integer> {
        trainingDataStructure.setEnd(new Date());
    }
 
-   public List<Integer> returnData(){
-       // TODO
-       //will return in next part steps when there will be connection to server
-  /*     TrainingDataStructure.builder()
-               .emgData(new ArrayList<>(trainingDataStructure.emgData))
-               .start(trainingDataStructure.start) // check if is immutable and wont reset
-               .end(trainingDataStructure.end)
-               .build();*/
-       return new ArrayList<>(trainingDataStructure.getEmgData());
+   public TrainingDataStructure returnData(){
+       return this.trainingDataStructure;
    }
 
    public void resetModel(){
