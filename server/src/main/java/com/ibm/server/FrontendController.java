@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -75,15 +76,14 @@ public class FrontendController {
 
         return "patients";
     }
-    @GetMapping("/single_patient.html")
-    public String single_patient(Model model) {
+    @GetMapping("/single_patient/{fullname}")
+    public String single_patient(Model model, @PathVariable String fullname) {
         AtomicInteger inte1 = new AtomicInteger(1);
         AtomicInteger inte2 = new AtomicInteger(1);
         AtomicInteger inte3 = new AtomicInteger(1);
         AtomicInteger inte4 = new AtomicInteger(1);
 
-        User user= new User();
-        user = userService.findUserByEmail(user.getFullname());
+        var user = userService.findUserByName(fullname);
 
         var hoursData = chartService.getChartData(ChartStructure.builder()
                 .login(user.getFullname())
